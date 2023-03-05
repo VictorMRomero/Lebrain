@@ -18,11 +18,13 @@
 }
 
 .card h2 {
-  font-size: 150px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 100px;
   margin-bottom: 100px;
 }
 
 .card p {
+  font-family: 'Poppins', sans-serif;
   font-size: 18px;
   margin-bottom: 20px;
 }
@@ -63,16 +65,19 @@
 }
 
 .resultado h2 {
-  font-size: 150px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 100px;
   margin-bottom: 100px;
 }
 
 .resultado p {
+  font-family: 'Poppins', sans-serif;
   font-size: 18px;
   margin-bottom: 20px;
 }
 
 .resultado button {
+  font-family: 'Poppins', sans-serif;
   background-color: #4CAF50;
   border: none;
   border-radius: 5px;
@@ -98,10 +103,11 @@
   max-width: 600px;
   padding: 20px;
   text-align: center;
-  text-size-adjust: ;
+  text-size-adjust: auto;
 }
 
 #result-container p {
+  font-family: 'Poppins', sans-serif;
   font-size: 24px;
   margin-bottom: 20px;
   
@@ -111,34 +117,6 @@
   display: block;
 }
 
-.cerrar-btn {
-  position: fixed;
-  bottom: 20px;
-  left: 60px;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;	
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #ff3535;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-  
-}
-.cerrar-btn:hover {
-  background-color: #ff3535; /* Green */
-  color: white;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-.cerrar-btn:active {
-background-color: #ff4747;
-box-shadow: 0 5px #666;
-transform: translateY(4px);
-}
 
 .progress-bar {
   background-color: #3bdd50;
@@ -155,7 +133,38 @@ transform: translateY(4px);
   transition: width 10s;
 }
 
+.cerrar-btn {
+  font-family: 'Poppins', sans-serif;
+  position: fixed;
+  bottom: 20px;
+  left: 60px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ff2929;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  
+}
+.cerrar-btn:hover {
+  background-color: #ff3535; /* Green */
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.cerrar-btn:active {
+background-color: #ff4747;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
+
 #next-button {
+  font-family: 'Poppins', sans-serif;
   position: fixed;
   bottom: 20px;
   right: 60px;
@@ -184,6 +193,7 @@ transform: translateY(4px);
 }
 
 #finalizar {
+  font-family: 'Poppins', sans-serif;
   display: absolute;
   position: fixed;
   bottom: 20px;

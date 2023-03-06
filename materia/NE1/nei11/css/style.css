@@ -1,0 +1,301 @@
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 900px; /* Máximo ancho de la tarjeta */
+  margin: 0 auto; /* Centrar la tarjeta */
+  padding: 0 20px; /* Agregar un poco de espacio a los lados */
+  background-color: #e2e0e0;
+  border: 1px solid #dddcdc;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  display: none;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.card.active {
+  display: block;
+}
+
+.card h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  
+}
+
+.card p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.card button {
+  background-color: #3787ff;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+
+  margin: 1px;
+  transition: background-color 0.6s;
+  height: 40px;
+  width: 40px;
+}
+.card button:hover {
+  background-color: #3e8e41;
+}
+
+.card .b-resolver .resolver{
+  background-color: #57ff51;
+  text-align: left;
+  height: 40px;
+  width: 100px;
+}
+
+
+.resultado {
+  position: relative;
+  width: 100%;
+  max-width: 900px; /* Máximo ancho de la tarjeta */
+  margin: 0 auto; /* Centrar la tarjeta */
+  padding: 0 20px; /* Agregar un poco de espacio a los lados */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  display: none;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.resultado.active {
+  display: block;
+}
+
+.resultado h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  margin-bottom: 100px;
+}
+
+.resultado p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.resultado button {
+  font-family: 'Poppins', sans-serif;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+.resultado button:hover {
+  background-color: #3e8e41;
+}
+
+
+#result-container {
+  
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+  text-align: center;
+  text-size-adjust: auto;
+}
+
+#result-container p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+  
+}
+
+.cerrar-btn.active {
+  display: block;
+}
+
+
+
+
+
+.cerrar-btn {
+  font-family: 'Poppins', sans-serif;
+  position: fixed;
+  bottom: 20px;
+  left: 60px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ff2929;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  
+}
+.cerrar-btn:hover {
+  background-color: #ff3535; /* Green */
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.cerrar-btn:active {
+background-color: #ff4747;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
+
+#next-button {
+  font-family: 'Poppins', sans-serif;
+  position: fixed;
+  bottom: 20px;
+  right: 60px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+#next-button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#next-button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#finalizar {
+  font-family: 'Poppins', sans-serif;
+  display: absolute;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ff3b3b;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+#finalizar:hover {
+  background-color: #f74f4f; /* Green */
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#finalizar:active {
+background-color: #ff4343;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
+
+/**
+* Styles for the puzzle
+*/
+
+#juego {
+    border: 2px solid rgb(131, 131, 131);
+    border-radius: 10px;
+    padding: 10px;
+    float: left;
+    margin: 10px 20px;
+}
+
+#juego div {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* style for each square in the puzzle */
+
+#juego .puzzleSquare {
+    height: 30px;
+    width: 30px;
+    text-transform: uppercase;
+    background-color: rgb(241, 0, 0);
+    border: 0;
+    font: 1em sans-serif;
+}
+
+
+/* indicates when a square has been selected */
+
+#juego .selected {
+    background-color: orange;
+}
+
+
+/* indicates that the square is part of a word that has been found */
+
+#juego .found {
+    background-color: blue;
+    color: white;
+}
+
+#juego .solved {
+    background-color: purple;
+    color: white;
+}
+
+
+/* indicates that all words have been found */
+
+#juego .complete {
+    background-color: green;
+}
+
+#Palabras {
+  margin-top: 20px;
+  margin-right: 5px;
+  text-align: justify;
+  font-size: 16px;
+}
+
+#Palabras ul {
+    list-style-type: none;
+}
+
+#Palabras li {
+    padding: 6px;
+    font: 1em;
+}
+
+
+/* indicates that the word has been found */
+
+#Palabras .wordFound {
+    text-decoration: line-through;
+    color: rgb(0, 0, 0);
+}
+
+

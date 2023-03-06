@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lebrain-NEI11</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">   
+    <link rel="stylesheet" href="css/jquery-ui.css"> 
+    <link rel="stylesheet" href="css/jquery.tagit.css">
+
+    <script src="js/jquery.min.js"></script>
+    <!-- Librerias para generar el juego -->
+    <script src="js/wordfind.js"></script>
+    <script src="js/wordfindgame.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+        <!-- Libreria para ingreso de palabras -->
+    <script src="js/tag-it.js"></script>
+
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+   </head>
+   <body>
+        <div id="card-container">
+            
+            <div class="progress" style="height: 15px;">
+                <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" ></div>
+            </div>
+    <div class="card active">
+        <h2>Tarjeta 1</h2>
+        <p>Contenido de la tarjeta 1</p>
+    </div>
+    <div class="card">
+        <h2>Tarjeta 2</h2>
+        <p>Contenido de la tarjeta 2</p>
+    </div>
+    <div class="card">
+        <h2>Sopa de letras</h2>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                Crear();
+            });
+        </script>            
+                
+                    
+        <div class="panel-body row">
+        <!-- Resultado de la sopa de letras con las palabras a buscar -->
+        <div class="row">
+            <div class="col-md-3">
+                <div id='Palabras'></div>
+            </div>
+            <div class="col-md-9">
+                <div id='juego'></div>
+                </div>
+            </div>
+            <div class="b-resolver">
+                <button id='solve' class=" resolver btn btn-danger btn-lg"> Resolver</button>
+            </div>
+        </div> 
+
+            <!-- controlar la sopa de letras -->
+            <script>
+                var palabras = [];
+                var juego;
+
+                function Crear() {
+                    // Tomar las palabras de la lista e introducurlas en un array
+                    datos = ['internet','wifi', 'redes', 'modem', 'cable'];
+                    for (i = 0; i < (datos.length) ; i++) {
+                        palabras.push(datos[i]);
+                    }
+
+                    $('#Juegos').show();
+                    /*
+                      se esta indicando que en el contenedor con el id juego se va a mostrar la sopa de letras
+                      y el contenedor con el id palabras va a mostrar las palabras a buscar
+                    */
+                    juego = wordfindgame.create(datos, '#juego', '#Palabras');
+                    // Estructura de la sopa de letras
+                    var puzzle = wordfind.newPuzzle(datos, {
+                        height: 18,
+                        width: 18,
+                        fillBlanks: false
+                    });
+                }
+                $('#solve').click(function() {
+                    wordfindgame.solve(juego, palabras);
+                });
+            </script>
+
+    </div>
+    <div class="card">
+        <h2>Veamos lo aprendido</h2>
+        <p>Primera pregunta del test... La respuesta es A.</p>
+        <p onclick="this.style.color='#00FF00'"><input type="radio" name="pregunta1" id="p11"> Texto de la respuesta A.</p>
+        <p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta1" id="p12"> Texto de la respuesta B.</p>
+        <p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta1" id="p13"> Texto de la respuesta C.</p>
+        <p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta1" id="p14"> Texto de la respuesta D.</p>
+        
+        <p>Contenido de la tarjeta 4</p>
+    </div>
+    <div class="resultado">
+        <h2> Resultado </h2>
+        <p>Contenido del resultado</p>
+    </div>
+    </div>
+    <a href="../negociosElectronicos1.html"><button class="cerrar-btn active">Salir</button></a>
+    <button id="next-button">Siguiente</button>
+    
+   </body>
+   <script src="js/app.js"></script>
+   <script src="css/jquery-ui.css"></script>
+</html>

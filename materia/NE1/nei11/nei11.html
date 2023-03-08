@@ -24,8 +24,8 @@
    <body>
         <div id="card-container">
             
-            <div class="progress" style="height: 15px;">
-                <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" ></div>
+            <div class="progress" style="height: 16px;">
+                <div class="progress-bar bg-success progre" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" ></div>
             </div>
     <div class="card active">
         <h2>Tarjeta 1</h2>
@@ -37,6 +37,9 @@
     </div>
     <div class="card">
         <h2>Sopa de letras</h2>
+        <p>Busca las palabras que aparecen del lado izquierdo, una vez realizada la sopa de letra 
+            se pondra de color verde.
+        </p>
 
         <script type="text/javascript">
             $(document).ready(function() {
@@ -62,7 +65,7 @@
 
             <!-- controlar la sopa de letras -->
             <script>
-                var palabras = [];
+                var palabras = ['internet', 'redes', 'modem'];
                 var juego;
 
                 function Crear() {
@@ -107,7 +110,7 @@
     </div>
     </div>
     <a href="../negociosElectronicos1.html"><button class="cerrar-btn active">Salir</button></a>
-    <button id="next-button">Siguiente</button>
+    <button id="next-button" class="active">Siguiente</button>
     
    </body>
    <script src="js/app.js"></script>

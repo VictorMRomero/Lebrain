@@ -25,7 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var i = 0; i < cards.length; i++) {
       cards[i].classList.remove('active');
     }
-  
+    if (index === 2){
+      nextButton.classList.remove('active');
+    }
     if (currentValue === maxValue){
       updateProgressBar(maxValue); 
       cerrar.remove('active');
@@ -37,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         history.back();
       });
 
-      // Mostrar la siguiente tarjeta sin la barra de progreso
+
       
     } else {
       // Mostrar la tarjeta actual

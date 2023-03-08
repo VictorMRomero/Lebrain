@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Aquí va todo el código JavaScript
     // Obtener las tarjetas y la barra de progreso
   var cards = document.querySelectorAll('.card');
-  var resultado = document.querySelector('.resultado');
   var progressBar = document.querySelector('.progress-bar');
   var cerrar = document.querySelector('.cerrar-btn')
 
@@ -25,18 +24,17 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var i = 0; i < cards.length; i++) {
       cards[i].classList.remove('active');
     }
-    if (index === 2){
-      nextButton.classList.remove('active');
-    }
-    if (currentValue === maxValue){
+    ultima = maxValue - (maxValue / cards.length);
+    if (currentValue === ultima){
+      cards[index].classList.add('active');   
       updateProgressBar(maxValue); 
       cerrar.remove('active');
-      nextButton.textContent = 'Salir';
+      nextButton.textContent = 'Cuestionario';
       nextButton.id = 'finalizar';
-      resultado.classList.add('active');
+
       var finalizar = document.querySelector('#finalizar');
       finalizar.addEventListener('click', function(){
-        history.back();
+        window.location.href = "questions.html";
       });
 
 

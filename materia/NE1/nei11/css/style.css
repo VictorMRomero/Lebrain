@@ -28,6 +28,9 @@
   font-size: 16px;
   margin-bottom: 5px;
 }
+.card .expli {
+  font-size: 25px;
+}
 
 .card button {
   background-color: #3787ff;
@@ -105,7 +108,7 @@ transform: translateY(4px);
   right: 60px;
   display: inline-block;
   padding: 10px 20px;
-  font-size: 24px;
+  font-size: 20px;
   cursor: pointer;
   text-align: center;	
   text-decoration: none;
@@ -129,12 +132,12 @@ transform: translateY(4px);
 
 #finalizar {
   font-family: 'Poppins', sans-serif;
-  display: absolute;
+  display: inline-block;
   position: fixed;
   bottom: 20px;
   right: 20px;
   padding: 10px 20px;
-  font-size: 24px;
+  font-size: 20px;
   cursor: pointer;
   text-align: center;	
   text-decoration: none;
@@ -241,6 +244,9 @@ ul {
 .tittle{
   font-size: 16px;
 }
-.img-final{
+.img-1{
+  width: 300px;
+}
+.img-2{
   width: 300px;
 }

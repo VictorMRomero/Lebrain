@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 :root{
-    --primary-color: #1da3dd;
+    --primary-color: #000000;
 }
 .hidden{
     display: none;
@@ -12,8 +12,8 @@
 }
 
 body{
-    font-family: 'Lato', sans-serif;
-    background-color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(243, 241, 241);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,8 +21,8 @@ body{
 }
 .container{
     width: 940px;
-    background: #fff;
-    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
+    background: #b8b8b8fd;
+    box-shadow: 0 0 50px 0 rgba(255, 5, 5, 0.2);
     min-height: 350px;
     padding: 80px 90px;
     border-radius: 10px;
@@ -41,7 +41,7 @@ body{
     font-size: 1.5rem;
 }
 .right h2{
-    color: #444;
+    color: #ffffff;
     margin: 20px auto 10px;
     font-size: 25px;
 }
@@ -59,7 +59,7 @@ body{
  a{
     background-color: var(--primary-color);
     border-radius: 100px;
-    color: #fff;
+    color: #3a3939;
     text-decoration: none;
     font-weight: bold;
     width: 100%;
@@ -72,15 +72,15 @@ body{
     outline: none;
 }
  a:hover{
-    background-color: #fff;
+    background-color: #3f3f3f;
     color: var(--primary-color);
 }
 
 /* Questions Page */
 .box{
-    background-color: #fff;
+    background-color: #a7a7a7;
     border-radius: 10px;
-    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 50px 0 rgb(139, 138, 138);
     min-height: 350px;
     width: 720px;
     padding: 50px;
@@ -108,7 +108,7 @@ body{
 }
 .questionBox{
     background-color: var(--primary-color);
-    color: #fff;
+    color: #adadad;
     border-radius: 10px;
     padding: 10px 15px;
     font-weight: bold;
@@ -133,7 +133,7 @@ body{
 
 }
 .optionBox span{
-    background-color: #fff;
+    background-color: #adadad;
     color: var(--primary-color);
     border-radius: 10px;
     border: 1px solid var(--primary-color);
@@ -142,7 +142,7 @@ body{
 
 .optionBox span:hover{
     cursor: pointer;
-    color: #fff;
+    color: #ffffff;
     background-color: var(--primary-color);
 }
 .footer{
@@ -151,7 +151,7 @@ body{
 }
 .footer button{
     background-color: var(--primary-color);
-    color: #fff;
+    color: #e6e6e6;
     font-weight: bold;
     padding: 7px 15px;
     border-radius: 5px;
@@ -245,7 +245,7 @@ body{
     font-family: cursive;
     font-size: 14px;
     text-align: center;
-    color: #666;
+    color: #ffffff;
 }
 .correct{
     background-color: #00ab00 !important;

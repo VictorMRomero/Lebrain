@@ -25,7 +25,7 @@ $(function(){
 
         if(counter == totalTime)
         {
-            alert("Time is up. Press OK to show result");
+            alert("El tiempo terminó, presiona OK para ver el resultado");
             result();
             clearInterval(timer);
         }
@@ -115,7 +115,7 @@ function showNext(){
 function showResult(j){
     if(
         j == 1 && num < 10 && 
-        !confirm("Quiz has not finished. Press OK to skip quiz and show results.")
+        !confirm("Aún no has terminado, presiona OK y te mostrara el resultado.")
     ){
         return;
     }

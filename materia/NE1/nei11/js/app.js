@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
       cards[index].classList.add('active');   
       updateProgressBar(maxValue); 
       cerrar.remove('active');
-      nextButton.textContent = 'Cuestionario';
+      nextButton.textContent = 'Vamos';
       nextButton.id = 'finalizar';
 
       var finalizar = document.querySelector('#finalizar');
@@ -64,6 +64,10 @@ document.addEventListener('DOMContentLoaded', function() {
     showCard(nextIndex);
   });
 
+
+  Crear();
+
+
 });
 
 
@@ -75,5 +79,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+var palabras = [];
+var juego;
 
+function Crear() {
+// Tomar las palabras de la lista e introducurlas en un array
+
+datos = ['marketing','dominio', 'hospedaje', 'www', 'pago', 'correo'];
+    for (i = 0; i < (datos.length) ; i++) {
+        palabras.push(datos[i]);
+    }
+
+    $('#Juegos').show();
+    /*
+    se esta indicando que en el contenedor con el id juego se va a mostrar la sopa de letras
+    y el contenedor con el id palabras va a mostrar las palabras a buscar
+    */
+    juego = wordfindgame.create(datos, '#juego', '#Palabras');
+    // Estructura de la sopa de letras
+    var puzzle = wordfind.newPuzzle(datos, {
+        height: 18,
+        width: 18,
+        fillBlanks: false
+    });
+}
+$('#solve').click(function() {
+  wordfindgame.solve(juego, palabras);
+});
 

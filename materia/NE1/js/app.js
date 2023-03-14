@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Obtener las tarjetas y la barra de progreso
   var cards = document.querySelectorAll('.card');
   var progressBar = document.querySelector('.progress-bar');
-  var cerrar = document.querySelector('.cerrar-btn')
-
+  var currentValue = 0;
   // Definir el valor máximo de la barra de progreso y el valor actual
   var maxValue = 100;
   var currentValue = 0;
@@ -24,11 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var i = 0; i < cards.length; i++) {
       cards[i].classList.remove('active');
     }
-    ultima = maxValue - (maxValue / cards.length);
-    if (currentValue === ultima){
+    
+    if (currentValue === maxValue){
       cards[index].classList.add('active');   
       updateProgressBar(maxValue); 
-      cerrar.remove('active');
       nextButton.textContent = 'Vamos';
       nextButton.id = 'finalizar';
 
@@ -43,8 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
       // Mostrar la tarjeta actual
       cards[index].classList.add('active');   
       // Actualizar el valor de la barra de progreso
-      currentValue += maxValue / cards.length;
       updateProgressBar(currentValue);
+      currentValue += maxValue / (cards.length - 1);
     }
   }
 
@@ -84,24 +82,26 @@ var juego;
 
 function Crear() {
 // Tomar las palabras de la lista e introducurlas en un array
+var lista = document.querySelector('.lista');
+var listaPalabras = lista.querySelectorAll('li');
+console.log(listaPalabras);
+datos = [];
+for (i = 0; i < (listaPalabras.length) ; i++) {
+  datos.push(listaPalabras[i].textContent);
+}
 
-datos = ['marketing','dominio', 'hospedaje', 'www', 'pago', 'correo'];
-    for (i = 0; i < (datos.length) ; i++) {
-        palabras.push(datos[i]);
-    }
-
-    $('#Juegos').show();
-    /*
-    se esta indicando que en el contenedor con el id juego se va a mostrar la sopa de letras
-    y el contenedor con el id palabras va a mostrar las palabras a buscar
-    */
-    juego = wordfindgame.create(datos, '#juego', '#Palabras');
-    // Estructura de la sopa de letras
-    var puzzle = wordfind.newPuzzle(datos, {
-        height: 18,
-        width: 18,
-        fillBlanks: false
-    });
+$('#Juegos').show();
+/*
+se esta indicando que en el contenedor con el id juego se va a mostrar la sopa de letras
+y el contenedor con el id palabras va a mostrar las palabras a buscar
+*/
+juego = wordfindgame.create(datos, '#juego', '#Palabras');
+// Estructura de la sopa de letras
+var puzzle = wordfind.newPuzzle(datos, {
+  height: 18,
+  width: 18,
+  fillBlanks: false
+});
 }
 $('#solve').click(function() {
   wordfindgame.solve(juego, palabras);

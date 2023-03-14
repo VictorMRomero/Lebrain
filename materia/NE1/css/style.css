@@ -1,45 +1,85 @@
+.bar-pro {
+  position: relative;
+  margin-top: 45px;
+  margin-left: 140px;
+  margin-right: 140px;
+  background-color: #ffffff ;
+}
+
+.progre {
+  background-color: #59ff53;
+  border-radius: 10px;
+}
+
+.boton{
+  font-family: 'Tilt Neon', sans-serif;
+  font-size: 20px;
+  position: absolute;
+  margin-left: 100px;
+  top: 39px;
+  border: none;
+  background-color: #ffffff;
+}
+
+.boton:hover {
+  background-color: #ff6b6b; /* Green */
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 .card {
   position: relative;
   width: 100%;
   max-width: 900px; /* Máximo ancho de la tarjeta */
-  margin: 0 auto; /* Centrar la tarjeta */
+  margin: 40px auto; /* Centrar la tarjeta */
   padding: 0 20px; /* Agregar un poco de espacio a los lados */
-  background-color: #e2e0e0;
-  border: 1px solid #dddcdc;
-  border-radius: 10px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   display: none;
   text-align: center;
-  box-sizing: border-box;
 }
 
 .card.active {
+  position: relative;
   display: block;
 }
 
-.card h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 30px;
-  
-}
 
+.card h2 {
+  position: relative;
+  font-weight: bold;
+  font-family: 'Tilt Neon', sans-serif;
+  font-size: 40px;
+}
+.card h3 {
+  position: relative;
+  font-weight: bold;
+  font-family: 'Tilt Neon', sans-serif;
+  font-size: 25px;
+}
 .card p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
+  position: relative;
+  font-family: 'Tilt Neon', sans-serif;
+  font-size: 20px;
   margin-bottom: 5px;
 }
-.card .expli {
-  font-size: 25px;
+
+.card li {
+  text-align: center;
+  position: relative;
+  font-family: 'Tilt Neon', sans-serif;
+  font-size: 18px;
+  margin-bottom: 5px;
+  list-style: none;
 }
 
 .card button {
+  position: relative;
   background-color: #3787ff;
   border: none;
   border-radius: 5px;
   color: #ffffff;
   cursor: pointer;
   font-size: 16px;
-
+  
   margin: 1px;
   transition: background-color 0.6s;
   height: 40px;
@@ -56,57 +96,11 @@
   width: 100px;
 }
 
-.bar-pro {
-  margin-left: 20px;
-  margin-right: 20px;
-  background-color: #ffffff ;
-  margin-top: 10px;
-}
-.progre {
-  background-color: #50f04b;
-  border-radius: 10px;
-}
-
-.cerrar-btn.active {
-  display: block;
-}
-
-.cerrar-btn {
-  font-family: 'Poppins', sans-serif;
-  position: fixed;
-  bottom: 20px;
-  left: 60px;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;	
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #ff2929;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-  
-}
-.cerrar-btn:hover {
-  background-color: #ff3535; /* Green */
-  color: white;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-.cerrar-btn:active {
-background-color: #ff4747;
-box-shadow: 0 5px #666;
-transform: translateY(4px);
-}
-
 #next-button {
   font-family: 'Poppins', sans-serif;
-  position: fixed;
-  bottom: 20px;
-  right: 60px;
-  display: inline-block;
+  position:fixed;
+  bottom: 40px;
+  right: 140px;
   padding: 10px 20px;
   font-size: 20px;
   cursor: pointer;
@@ -114,28 +108,28 @@ transform: translateY(4px);
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: #00ff22;
+  background-color: #31fa4c;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
 #next-button:hover {
-    background-color: #4CAF50; /* Green */
+    background-color: #26fa1e; /* Green */
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 #next-button:active {
-  background-color: #3e8e41;
+  background-color: #078b03;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
 #finalizar {
   font-family: 'Poppins', sans-serif;
+  position:absolute;
+  bottom: 40px;
+  right: 140px;
   display: inline-block;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
   padding: 10px 20px;
   font-size: 20px;
   cursor: pointer;
@@ -143,7 +137,7 @@ transform: translateY(4px);
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: #2aff34;
+  background-color: #31fa4c;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
@@ -159,10 +153,9 @@ box-shadow: 0 5px #666;
 transform: translateY(4px);
 }
 
-/**
-* Styles for the puzzle
-*/
-
+.lista{
+  display: none;
+}
 #juego {
     border: 2px solid rgb(131, 131, 131);
     border-radius: 10px;
@@ -242,11 +235,12 @@ ul {
 }
 
 .tittle{
-  font-size: 16px;
+  font-size: 12px;
 }
 .img-1{
   width: 300px;
 }
 .img-2{
   width: 300px;
+  text-align: right;
 }

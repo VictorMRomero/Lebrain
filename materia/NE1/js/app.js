@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var currentValue = 0;
   // Definir el valor máximo de la barra de progreso y el valor actual
   var maxValue = 100;
-  var currentValue = 0;
+  
+  console.log(cards.length)
 
   // Función para actualizar el valor de la barra de progreso
   function updateProgressBar(value) {
@@ -17,14 +18,13 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Función para mostrar la tarjeta actual y actualizar la barra de progreso
-  function showCard(index) {
-    
+  function showCard(index) { 
     // Ocultar todas las tarjetas
     for (var i = 0; i < cards.length; i++) {
       cards[i].classList.remove('active');
     }
-    
-    if (currentValue === maxValue){
+    console.log(index);
+    if (index === cards.length - 1){
       cards[index].classList.add('active');   
       updateProgressBar(maxValue); 
       nextButton.textContent = 'Vamos';
@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Actualizar el valor de la barra de progreso
       updateProgressBar(currentValue);
       currentValue += maxValue / (cards.length - 1);
+      console.log(currentValue);
     }
   }
 

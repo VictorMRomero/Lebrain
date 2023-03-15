@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 :root{
-    --primary-color: #000000;
+    --primary-color: #000c52;
 }
 .hidden{
     display: none;
@@ -12,7 +12,7 @@
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Tilt Neon', sans-serif;
     background-color: rgb(243, 241, 241);
     display: flex;
     justify-content: center;
@@ -20,8 +20,8 @@ body{
     min-height: 100vh;
 }
 .container{
-    width: 940px;
-    background: #b8b8b8fd;
+    width: 1000px;
+    background: #f1f0f0fd;
     box-shadow: 0 0 50px 0 rgba(255, 5, 5, 0.2);
     min-height: 350px;
     padding: 80px 90px;
@@ -78,7 +78,7 @@ body{
 
 /* Questions Page */
 .box{
-    background-color: #a7a7a7;
+    background-color: #cfcfcf;
     border-radius: 10px;
     box-shadow: 0 0 50px 0 rgb(139, 138, 138);
     min-height: 350px;
@@ -191,6 +191,7 @@ body{
     font-weight: bold;
 }
 .buttonBox{
+    font-family: 'Tilt Neon', sans-serif;
     border-top: 1px solid var(--primary-color);
     padding: 15px;
     text-align: center;
@@ -245,7 +246,7 @@ body{
     font-family: cursive;
     font-size: 14px;
     text-align: center;
-    color: #ffffff;
+    color: #4b4a4a;
 }
 .correct{
     background-color: #00ab00 !important;

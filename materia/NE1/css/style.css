@@ -62,8 +62,8 @@
   margin-bottom: 5px;
 }
 
-.card li {
-  text-align: center;
+.card ul {
+  text-align: left;
   position: relative;
   font-family: 'Tilt Neon', sans-serif;
   font-size: 18px;
@@ -72,7 +72,7 @@
 }
 
 .card button {
-  position: relative;
+  position:static;
   background-color: #3787ff;
   border: none;
   border-radius: 5px;
@@ -97,7 +97,7 @@
 }
 
 #next-button {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Tilt Neon', sans-serif;
   position:fixed;
   bottom: 40px;
   right: 140px;
@@ -126,7 +126,7 @@
 
 #finalizar {
   font-family: 'Poppins', sans-serif;
-  position:absolute;
+  position:fixed;
   bottom: 40px;
   right: 140px;
   display: inline-block;

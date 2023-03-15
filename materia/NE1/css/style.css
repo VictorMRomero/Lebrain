@@ -11,7 +11,7 @@
   border-radius: 10px;
 }
 
-.boton{
+.boton_x{
   font-family: 'Tilt Neon', sans-serif;
   font-size: 20px;
   position: absolute;
@@ -21,7 +21,7 @@
   background-color: #ffffff;
 }
 
-.boton:hover {
+.boton_x:hover {
   background-color: #ff6b6b; /* Green */
   color: white;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -47,7 +47,7 @@
   position: relative;
   font-weight: bold;
   font-family: 'Tilt Neon', sans-serif;
-  font-size: 40px;
+  font-size: 35px;
 }
 .card h3 {
   position: relative;
@@ -71,7 +71,7 @@
   list-style: none;
 }
 
-.card button {
+.letras button {
   position:static;
   background-color: #3787ff;
   border: none;
@@ -85,11 +85,11 @@
   height: 40px;
   width: 40px;
 }
-.card button:hover {
+.letras button:hover {
   background-color: #3e8e41;
 }
 
-.card .b-resolver .resolver{
+.letras .b-resolver .resolver{
   background-color: #57ff51;
   text-align: left;
   height: 40px;
@@ -175,7 +175,7 @@ transform: translateY(4px);
 #juego .puzzleSquare {
     height: 30px;
     width: 30px;
-    text-transform: uppercase;
+    text-transform:uppercase;
     background-color: rgb(241, 0, 0);
     border: 0;
     font: 1em sans-serif;

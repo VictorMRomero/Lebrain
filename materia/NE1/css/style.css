@@ -244,3 +244,50 @@ ul {
   width: 300px;
   text-align: right;
 }
+
+/** drop **/
+.table{
+  position:relative;
+  text-align: center;
+
+}
+.ficha {
+
+  height: 60px;
+  float: center;
+
+  cursor: move;
+}
+.ficha.over {
+  border: 2px dashed #000;
+}
+
+#verificar{
+  font-family: 'Tilt Neon', sans-serif;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #31fa4c;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+#verificar:hover {
+  background-color: #38ff74; /* Green */
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#verificar:active {
+background-color: #93ff7d;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
+.drop{
+  display: none;
+  font-family: 'Tilt Neon', sans-serif;
+  font-size: 18px;
+}

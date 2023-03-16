@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Definir el valor máximo de la barra de progreso y el valor actual
   var maxValue = 100;
   
-  console.log(cards.length)
+
 
   // Función para actualizar el valor de la barra de progreso
   function updateProgressBar(value) {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var i = 0; i < cards.length; i++) {
       cards[i].classList.remove('active');
     }
-    console.log(index);
+
     if (index === cards.length - 1){
       cards[index].classList.add('active');   
       updateProgressBar(maxValue); 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Actualizar el valor de la barra de progreso
       updateProgressBar(currentValue);
       currentValue += maxValue / (cards.length - 1);
-      console.log(currentValue);
+
     }
   }
 

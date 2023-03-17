@@ -1,4 +1,4 @@
-var palabras = ["Manzana", "Banana", "Naranja", "Pera"];
+var palabras = ["Búsqueda del producto", "Selección del producto", "Proceso de pago", "Confirmación de la compra", "Entrega del producto", "Servicio postventa"];
             
             /** Drag and drop **/
 var dragSrcEl = null;
@@ -45,7 +45,7 @@ var items = document.querySelectorAll(".ficha");
 for (var i = 0; i < items.length; i++) {
     palabrasOrdenadas.push(items[i].textContent);
 }
-console.log(palabrasOrdenadas);
+
 
 }
 //agregamos todos los eventos anteriores a cada columna mediante un ciclo
@@ -64,10 +64,12 @@ botonVerificar.addEventListener("click", function() {
     cols[1].setAttribute("draggable", "false");
     cols[2].setAttribute("draggable", "false");
     cols[3].setAttribute("draggable", "false");
+    var puntos = 0;
     var puntaje = 0;
     for(var i = 0; i < palabras.length; i++){
         if(palabrasOrdenadas[i] == palabras[i]){
-            puntaje += 100/palabras.length;
+            puntos += 100/palabras.length;
+            puntaje = Math.floor(puntos);
         }
     }
 
@@ -78,4 +80,3 @@ botonVerificar.addEventListener("click", function() {
 
 });
 
-//palabras.sort(function() { return 0.5 - Math.random() });

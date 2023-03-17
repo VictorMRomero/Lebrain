@@ -221,9 +221,11 @@ ul {
     text-size-adjust: 18px;
 }
 
-#Palabras li {
-    padding: 6px;
-    font: 1em;
+li {
+  font-size: 18px;
+  list-style: none;
+  text-align: left;
+  margin-top: 8px;
 }
 
 
@@ -249,7 +251,6 @@ ul {
 .table{
   position:relative;
   text-align: center;
-
 }
 .ficha {
 

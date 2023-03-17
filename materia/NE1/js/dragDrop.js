@@ -78,3 +78,4 @@ botonVerificar.addEventListener("click", function() {
 
 });
 
+//palabras.sort(function() { return 0.5 - Math.random() });

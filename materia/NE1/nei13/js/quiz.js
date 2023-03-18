@@ -1,60 +1,60 @@
 let quiz = [
     {
-        question: "¿Qué es el e-commerce?",
+        question: "¿Cuál es una ventaja de los negocios por internet?",
         option: [
-            "Una forma de hacer negocios por internet",
-            "La venta de bienes y servicios por internet",
-            "La creación de relaciones comerciales por internet",
-            "Un sistema de pago electrónico",
+            "Mayor costo de operación",
+            "Menor alcance geográfico",
+            "Menor interacción con clientes",
+            "Mayor flexibilidad y escalabilidad",
         ],
-        answer: 2,
+        answer: 4,
     },
     {
-        question: "¿Qué es el e-business?",
+        question: "¿Cuál de los siguientes NO es un modelo de negocio en línea?",
          option: [
-            "Una forma de hacer negocios por internet",
-            "La venta de bienes y servicios por internet",
-            "La creación de relaciones comerciales por internet",
-            "Un sistema de pago electrónico",
+            "Marketing de afiliación",
+            "Comercio electrónico",
+            "Desarrollo de software",
+            "Publicidad en línea",
+        ],
+        answer: 3,
+    },
+    {
+        question: "¿Qué es el marketing de contenido?",
+         option: [
+            "Crear contenido interesante para atraer y retener a los clientes",
+            "Promocionar productos en línea",
+            "Crear anuncios en línea para atraer clientes",
+            "Crear diseños gráficos para promocionar productos",
         ],
         answer: 1,
     },
     {
-        question: "¿Cuál es la principal diferencia entre e-commerce y e-business?",
+        question:
+            "¿Cuál es una plataforma de comercio electrónico popular?",
          option: [
-            "El tipo de bienes y servicios que se venden",
-            "El número de clientes que se pueden atender",
-            "La forma en que se relaciona con los clientes",
-            "El alcance de las actividades comerciales",
+            "Facebook",
+            "Instagram",
+            "Amazon",
+            "TikTok",
+        ],
+        answer: 3,
+    },
+    {
+        question:
+            "¿Que son los negocios por internet?",
+         option: [
+            "Se refieren a la actividad comercial que se realiza a través de la red",
+            "Un método para aumentar la visibilidad de un sitio web",
+            "Una forma de pago en línea",
+            "Un sistema de seguridad en línea",
         ],
         answer: 4,
     },
     {
-        question:
-            "¿Qué es el customer relationship management (CRM)?",
+        question: "¿Que desafío tienen los negocios por internet",
          option: [
-            "La venta de productos y servicios por internet",
-            "La gestión de las relaciones con los clientes",
-            "La promoción de productos y servicios por internet",
-            "La publicidad en medios tradicionales",
-        ],
-        answer: 2,
-    },
-    {
-        question:
-            "¿Cuál de las siguientes opciones NO es un beneficio de los ecommerce?",
-         option: [
-            "Mayor comodidad para los clientes",
-            "Mayor alcance geográfico para los negocios",
-            "Menores costos de operación para los negocios",
-            "Menor calidad de los productos vendidos",
-        ],
-        answer: 4,
-    },
-    {
-        question: "¿Cuál de las siguientes opciones es una medida de seguridad para los ecommerce?",
-         option: [
-            "Certificado SSL",
+            "la seguridad en línea",
             "Uso de contraseñas débiles",
             "Compartir información confidencial por correo electrónico",
             "No utilizar ningún tipo de protección",
@@ -62,7 +62,7 @@ let quiz = [
         answer: 1,
     },
     {
-        question: "¿Cuál es una de las principales preocupaciones de los clientes en relación a los ecommerce?",
+        question: "¿Cuál es una de las principales preocupaciones de los clientes en relación a los negocios electronicos?",
          option: [
             "La calidad de los productos vendidos",
             "La seguridad de la información personal y financiera",
@@ -73,37 +73,28 @@ let quiz = [
     },
     {
         question:
-            "¿Cuál es un ejemplo de una plataforma de comercio electrónico utilizada en un ebusiness?",
+            "¿Cuál es un ejemplo de una plataforma de negocio electrónico mas utilizada?",
          option: [
             "Instagram",
             "LinkedIn",
-            "Amazon",
+            "Mercado Libre",
             "Ninguna de las anteriores",
         ],
-        answer: 4,
+        answer: 3,
     },
     {
-        question: "¿Cuál es un ejemplo de un modelo de negocio utilizado en un ebusiness?",
+        question: "¿Qué es el análisis de datos?",
          option: [
-            "B2B (business-to-business)",
-            "B2C (business-to-consumer)",
-            "C2C (consumer-to-consumer)",
-            "Todas las anteriores",
+            "Recopilar y analizar datos para mejorar la toma de decisiones",
+            "Crear contenido en línea para atraer clientes",
+            "Promocionar productos en línea",
+            "Crear diseños gráficos para promocionar productos",
         ],
-        answer: 4,
+        answer: 1,
     },
+
     {
-        question: "¿Cuál es un ejemplo de un sistema de gestión de relaciones con el cliente (CRM) utilizado en un ebusiness?",
-         option: [
-            "Salesforce",
-            "Dropbox",
-            "PayPal",
-            "Ninguna de las anteriores",
-        ],
-        answer: 4,
-    },
-    {
-        question: "¿Cuál es un ejemplo de un software de gestión de contenido utilizado en un ebusiness?",
+        question: "¿Cuál es un ejemplo de un software de gestión de contenido utilizado en los negocios electronicos?",
          option: [
             "Adobe Photoshop",
             "Microsoft Word",

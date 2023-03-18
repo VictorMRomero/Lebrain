@@ -9,7 +9,28 @@ document.addEventListener('DOMContentLoaded', function() {
   // Definir el valor máximo de la barra de progreso y el valor actual
   var maxValue = 100;
   
+  // Mostrar la animación de carga
+function showLoader() {
+  document.getElementById("loader").style.display = "block";
+}
 
+// Ocultar la animación de carga
+function hideLoader() {
+  document.getElementById("loader").style.display = "none";
+}
+// Mostrar la animación de carga cuando la página se carga
+window.addEventListener("load", function() {
+  showLoader();
+});
+
+// Ocultar la animación de carga después de que la página se carga
+window.addEventListener("load", function() {
+  setTimeout(function() {
+    hideLoader();
+    document.getElementById("card-container").style.display = "block";
+  }, 2000);  
+
+});
 
   // Función para actualizar el valor de la barra de progreso
   function updateProgressBar(value) {

@@ -1,4 +1,4 @@
-var palabras = ["Búsqueda del producto", "Selección del producto", "Proceso de pago", "Confirmación de la compra", "Entrega del producto", "Servicio postventa"];
+var palabras = ["Plataformas abiertas", "Negocios electrónicos", "Integración", "Flexibilidad", "Personalización"];
             
             /** Drag and drop **/
 var dragSrcEl = null;
@@ -41,7 +41,7 @@ function handleDragEnd(e) {
     col.classList.remove('over');//eliminamos el borde rojo de todas las columnas
     });
 palabrasOrdenadas = [];
-var items = document.querySelectorAll(".ficha");
+var items = document.querySelectorAll(".correct");
 for (var i = 0; i < items.length; i++) {
     palabrasOrdenadas.push(items[i].textContent);
 }
@@ -60,14 +60,15 @@ for (var i = 0; i < items.length; i++) {
 
 let botonVerificar = document.getElementById("verificar");
 botonVerificar.addEventListener("click", function() {
-    cols[0].setAttribute("draggable", "false");
-    cols[1].setAttribute("draggable", "false");
-    cols[2].setAttribute("draggable", "false");
-    cols[3].setAttribute("draggable", "false");
+    for (var i = 0; i < cols.length; i++){
+        cols[i].setAttribute("draggable", "false");
+    }
+
     var puntos = 0;
     var puntaje = 0;
+    console.log(palabrasOrdenadas);
     for(var i = 0; i < palabras.length; i++){
-        if(palabrasOrdenadas[i] == palabras[i]){
+        if(palabras.includes(palabrasOrdenadas[i])){
             puntos += 100/palabras.length;
             puntaje = Math.floor(puntos);
         }

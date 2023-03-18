@@ -1,8 +1,34 @@
+
+
+
 let index =0;
 let attempt = 0;
 let score = 0;
 let wrong = 0;
 let totalQuestions = 10;
+
+  // Mostrar la animación de carga
+function showLoader() {
+  document.getElementById("loader").style.display = "block";
+}
+
+// Ocultar la animación de carga
+function hideLoader() {
+  document.getElementById("loader").style.display = "none";
+}
+// Mostrar la animación de carga cuando la página se carga
+window.addEventListener("load", function() {
+  showLoader();
+});
+
+// Ocultar la animación de carga después de que la página se carga
+window.addEventListener("load", function() {
+   setTimeout(function() {
+    hideLoader();
+    document.getElementById("questionScreen").style.display = "block";
+  }, 3000); 
+});
+
 let questions = quiz.sort(function(){
    return 0.5 - Math.random();
 });

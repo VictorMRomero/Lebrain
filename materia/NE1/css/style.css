@@ -1,3 +1,21 @@
+#loader {
+  background-image: url("../../../images/bubble-gum-womans-head.gif");
+  background-size: cover;
+  position: fixed;
+  top: 35%;
+  left: 40%;
+  width: 180px;
+  height: 180px;
+  animation: 5s;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#card-container{
+  display: none;
+}
 .bar-pro {
   position: relative;
   margin-top: 45px;
@@ -251,6 +269,11 @@ li {
 .table{
   position:relative;
   text-align: center;
+  font-family: 'Tilt Neon', sans-serif;
+  font-size: 18px;
+}
+.correct{
+  background-color: #d4e4fd;
 }
 .ficha {
 

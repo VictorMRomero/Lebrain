@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lebrain-NEI12</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">   
+    <link rel="stylesheet" href="css/base.css" type="text/css">
+    <!-- Librerias para generar el juego -->
+    <script src="../js/app.js"></script>
+    <!--Tipo de letra-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader"></div>
+    <div id="card-container">            
+        <a href="../negociosElectronicos1.html"><button class="boton_x">X</button></a>
+        <div class="progress bar-pro" style="height: 18px;">
+            <div class="progress-bar progre" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" ></div>
+        </div>
+
+        <div class="card active">
+            <div id="oygContext">
+                <div id="datos">
+                    <div class="oyListCell" id="oygListH"></div>
+                    <div class="oyListCell" id="oygListV"></div>
+                </div>
+                <div class="oyFrame">
+
+                    <table class="oyFrame" style="display: none">
+                        <tr class="oyHeader">
+                            <td class="oyHeader">
+                                <div id="oygHeader"></div>
+                            </td>
+                            <td>
+                                <div id="oygHeaderMenu"></div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="oyPuzzleCell">
+                        <div class="oyPuzzle" id="oygPuzzle"></div>
+                        <div class="oyPuzzleFooter" id="oygPuzzleFooter"></div>
+                        <div id="oygState"></div>
+                    </div>
+
+                </div>
+                <div id="oygStatic" style="display: none;"></div>
+                <div id="oygFooter" style="display: none;"></div>
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <h2>Felicidades, llegaste al final.</h2>
+            <p>Vamos a realizar una pequeña prueba para reforzar lo aprendido:</p>
+            <div></div>
+            <ul>
+                <li>10 Preguntas (20 segundos cada una)</li>
+                <li>10 Puntos por pregunta correcta</li>
+                <li>200 segundos en el reloj</li>
+                <li>Preguntas aleatorias</li>
+                <li>Tu resultado al final</li>
+            </ul>
+            <img class = "img-1" src="../../../images/bubble-gum-success.svg"></img>
+        </div>
+        <button id="next-button">Siguiente</button>
+    </div>
+</body>
+<!-- archivos javascript. conservar orden -->
+<script type="text/javascript" src="js/oyPrologue.js"></script>
+<script type="text/javascript" src="js/oyJsrAjax.js"></script>
+<script type="text/javascript" src="js/oyClue.js"></script>
+<script type="text/javascript" src="js/oyMenu.js"></script>
+<script type="text/javascript" src="js/oyPuzzle.js"></script>
+<script type="text/javascript" src="js/oyServer.js"></script>
+<script type="text/javascript" src="js/oySign.js"></script>
+<script type="text/javascript" src="js/oyMisc.js"></script>
+<!-- Mio -->
+<script type="text/javascript" src="js/codigoCrucigrama.js"></script>
+<!-- here we instantiate the puzzle and bind it to the HTML template above and show it to the user -->
+<script type="text/javascript" src="js/oyEpilogue.js"></script>
+
+</html>

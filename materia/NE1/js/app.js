@@ -28,7 +28,7 @@ window.addEventListener("load", function() {
   setTimeout(function() {
     hideLoader();
     document.getElementById("card-container").style.display = "block";
-  }, 2000);  
+  }, 1000);  
 
 });
 

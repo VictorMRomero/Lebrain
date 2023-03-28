@@ -1,9 +1,9 @@
 #loader {
   background-image: url("../../../images/bubble-gum-womans-head.gif");
   background-size: cover;
-  position: fixed;
-  top: 35%;
-  left: 40%;
+  position: absolute;
+  margin: auto;
+  inset: 0;
   width: 180px;
   height: 180px;
   animation: 5s;

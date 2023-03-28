@@ -27,8 +27,8 @@
                         <div class="mb-3"><input class="shadow-sm form-control" type="nombre" name="nombre" placeholder="Nombre" required></div>
                         <div class="mb-3"><input class="shadow-sm form-control" type="apellido" name="apellido" placeholder="Apellido" required></div>
                         <div class="mb-3"><input class="shadow-sm form-control" type="email" name="email" placeholder="Correo" title='Ingrese una direccion valida' placeholder="Correo" required></div>
-                        <div class="mb-3"><input class="shadow-sm form-control" type="password" name="password" placeholder="Contraseña" pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}" placeholder="Contraseña" title="La contraseña debe tener al menos 8 caracteres y contener al menos un número y una letra" required></div>
-                        <div class="mb-3"><input class="shadow-sm form-control" type="password" name="password_repeat" placeholder="Repite la contraseña" required></div>
+                        <div class="mb-3"><input class="shadow-sm form-control" id="pass1" type="password" name="password" placeholder="Contraseña" pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}" placeholder="Contraseña" title="La contraseña debe tener al menos 8 caracteres y contener al menos un número y una letra" required></div>
+                        <div class="mb-3"><input class="shadow-sm form-control" id="pass2" type="password" name="password_repeat" placeholder="Repite la contraseña" oninput="checkPasswords()"  required></div>
                         <div class="mb-5"><button class="btn btn-primary shadow" type="submit">Crea tu cuenta</button></div>
                         <p class="text-muted">Ya tienes una cuenta? <a href="login.html">Ingresa&nbsp;
                     </form>
@@ -39,6 +39,7 @@
     <footer>
 
     </footer>
+    <script src="./materia/NE1/js/pass.js"
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/startup-modern.js"></script>
 </body>

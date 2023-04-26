@@ -93,11 +93,18 @@ function mostrarSubtemas(dataSubtemas){
           
           //const botones = document.querySelectorAll('button[id]');
           let boton = document.getElementById(`${data._id}`);
+          let divContenedor = boton.parentNode.parentNode.parentNode;
+          let botonCollapse = divContenedor.parentNode.querySelector('button');
 
           
           if(Subtema.calificacion === 0){
 
             boton.classList.add("haciendo");
+            //Abrimos el acordeon de la actividad que vayamos realizando
+            botonCollapse.classList.remove('collapsed');
+            divContenedor.classList.add("show");
+            botonCollapse.setAttribute('aria-expanded', 'true');
+
             boton.addEventListener('click', (e) => {
               e.preventDefault()
               window.location.href = data.link;

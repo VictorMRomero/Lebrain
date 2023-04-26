@@ -1,3 +1,5 @@
+
+/* === animacion de carga ===*/
 #loader {
   background-image: url("../../../images/bubble-gum-womans-head.gif");
   background-size: cover;
@@ -9,34 +11,44 @@
   animation: 5s;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
 #card-container{
   display: none;
 }
-.bar-pro {
-  position: relative;
-  margin-top: 45px;
-  margin-left: 140px;
-  margin-right: 140px;
-  background-color: #ffffff ;
+
+/*=== div que contiene el boton x y la barra de progreso */
+.conteinerBotonBarra{
+  width: 80%;
+  height: 25px;
+  margin: 2em auto 0;
+  display: block;
+  text-align: center;
+
 }
 
+.bar-pro {
+  margin-top: 3px;
+  float: right;
+  width: 95%;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
 .progre {
   background-color: #59ff53;
   border-radius: 10px;
 }
 
 .boton_x{
+  margin-top: 2px;
+  margin-left: 20px;
+  display: flex;
+  float: left;
   font-family: 'Tilt Neon', sans-serif;
+  height: 20px;
   font-size: 20px;
-  position: absolute;
-  margin-left: 100px;
-  top: 39px;
   border: none;
   background-color: #ffffff;
+  justify-content: center; /* Alinear horizontalmente */
+  align-items: center; /* Alinear verticalmente */
 }
 
 .boton_x:hover {
@@ -45,18 +57,19 @@
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
+
 .card {
-  position: relative;
-  width: 100%;
-  max-width: 900px; /* Máximo ancho de la tarjeta */
-  margin: 40px auto; /* Centrar la tarjeta */
+
+  width: 80%;
+  height: 450px;
+  margin: 0 auto; /* Centrar la tarjeta */
   padding: 0 20px; /* Agregar un poco de espacio a los lados */
   display: none;
   text-align: center;
 }
 
+
 .card.active {
-  position: relative;
   display: block;
 }
 
@@ -66,18 +79,21 @@
   font-weight: bold;
   font-family: 'Tilt Neon', sans-serif;
   font-size: 35px;
+  text-align: center;
 }
 .card h3 {
   position: relative;
   font-weight: bold;
   font-family: 'Tilt Neon', sans-serif;
   font-size: 25px;
+  text-align: center;
 }
 .card p {
   position: relative;
   font-family: 'Tilt Neon', sans-serif;
   font-size: 20px;
   margin-bottom: 5px;
+  text-align: justify;
 }
 
 .card ul {
@@ -88,48 +104,29 @@
   margin-bottom: 5px;
   list-style: none;
 }
-
-.letras button {
-  position:static;
-  background-color: #3787ff;
-  border: none;
-  border-radius: 5px;
-  color: #ffffff;
-  cursor: pointer;
-  font-size: 16px;
-  
-  margin: 1px;
-  transition: background-color 0.6s;
-  height: 40px;
-  width: 40px;
-}
-.letras button:hover {
-  background-color: #3e8e41;
+.card img {
+  margin-top: 0;
 }
 
-.letras .b-resolver .resolver{
-  background-color: #57ff51;
-  text-align: left;
-  height: 40px;
-  width: 100px;
+.contBotonSig{
+  width: 80%;
+  margin: auto; 
+  text-align: right;
+  height: 60px;
 }
-
 #next-button {
   font-family: 'Tilt Neon', sans-serif;
-  position:fixed;
-  bottom: 40px;
-  right: 140px;
-  padding: 10px 20px;
+  width: 140px;
+  height: 50px;
   font-size: 20px;
-  cursor: pointer;
   text-align: center;	
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: #31fa4c;
+  background-color: #35dd4c;
   border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
+  border-radius: 25px;
+  box-shadow: 0 9px #8a8989;
 }
 #next-button:hover {
     background-color: #26fa1e; /* Green */
@@ -142,23 +139,62 @@
   transform: translateY(4px);
 }
 
+
+
+.tittle{
+  font-size: 18px;
+}
+.img-1{
+  width: 300px;
+}
+.contFeliz {
+  display: flex;
+  width: auto;
+  height: auto;
+  align-items: center;
+
+}
+.img-2{
+  width: 30%;
+}
+.indicaciones{
+  margin-left: 10%;
+  width: auto;
+}
+@media only screen and (max-width: 600px) {
+  .conteinerBotonBarra{
+    width: 100%;
+  }
+  .boton_x{
+    margin-left: 0;
+  }
+  .card{
+    width: 100%;
+    height: auto;
+  }
+  .contBotonSig {
+    width: 100%;
+  }
+  .indicaciones{
+    margin-left: 0;
+  }
+  .img-2{
+    width: 50%;
+  }
+}
 #finalizar {
-  font-family: 'Poppins', sans-serif;
-  position:fixed;
-  bottom: 40px;
-  right: 140px;
-  display: inline-block;
-  padding: 10px 20px;
+  font-family: 'Tilt Neon', sans-serif;
+  width: 140px;
+  height: 50px;
   font-size: 20px;
-  cursor: pointer;
   text-align: center;	
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: #31fa4c;
+  background-color: #35dd4c;
   border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
+  border-radius: 25px;
+  box-shadow: 0 9px #8a8989;
 }
 #finalizar:hover {
   background-color: #38ff74; /* Green */
@@ -169,149 +205,4 @@
 background-color: #93ff7d;
 box-shadow: 0 5px #666;
 transform: translateY(4px);
-}
-
-.lista{
-  display: none;
-}
-#juego {
-    border: 2px solid rgb(131, 131, 131);
-    border-radius: 10px;
-    padding: 10px;
-    float: left;
-    margin: 10px 20px;
-}
-
-#juego div {
-    width: 100%;
-    margin: 0 auto;
-}
-
-
-/* style for each square in the puzzle */
-
-#juego .puzzleSquare {
-    height: 30px;
-    width: 30px;
-    text-transform:uppercase;
-    background-color: rgb(241, 0, 0);
-    border: 0;
-    font: 1em sans-serif;
-}
-
-
-/* indicates when a square has been selected */
-
-#juego .selected {
-    background-color: orange;
-}
-
-
-/* indicates that the square is part of a word that has been found */
-
-#juego .found {
-    background-color: blue;
-    color: white;
-}
-
-#juego .solved {
-    background-color: purple;
-    color: white;
-}
-
-
-/* indicates that all words have been found */
-
-#juego .complete {
-    background-color: green;
-}
-
-#Palabras {
-  margin-top: 20px;
-  margin-right: 5px;
-  text-align: justify;
-  font-size: 18px;
-}
-
-ul {
-    list-style-type: none;
-    text-align: left;
-    text-size-adjust: 18px;
-}
-
-li {
-  font-size: 18px;
-  list-style: none;
-  text-align: left;
-  margin-top: 8px;
-}
-
-
-/* indicates that the word has been found */
-
-#Palabras .palabraEncontrada {
-    text-decoration: line-through;
-    color: rgb(255, 0, 0);
-}
-
-.tittle{
-  font-size: 12px;
-}
-.img-1{
-  width: 300px;
-}
-.img-2{
-  width: 300px;
-  text-align: right;
-}
-
-/** drop **/
-.table{
-  position:relative;
-  text-align: center;
-  font-family: 'Tilt Neon', sans-serif;
-  font-size: 18px;
-}
-.correct{
-  background-color: #d4e4fd;
-}
-.ficha {
-
-  height: 60px;
-  float: center;
-
-  cursor: move;
-}
-.ficha.over {
-  border: 2px dashed #000;
-}
-
-#verificar{
-  font-family: 'Tilt Neon', sans-serif;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: center;	
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #31fa4c;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
-#verificar:hover {
-  background-color: #38ff74; /* Green */
-  color: white;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-#verificar:active {
-background-color: #93ff7d;
-box-shadow: 0 5px #666;
-transform: translateY(4px);
-}
-.drop{
-  display: none;
-  font-family: 'Tilt Neon', sans-serif;
-  font-size: 18px;
 }

@@ -66,7 +66,7 @@ botonVerificar.addEventListener("click", function() {
 
     var puntos = 0;
     var puntaje = 0;
-    console.log(palabrasOrdenadas);
+
     for(var i = 0; i < palabras.length; i++){
         if(palabras.includes(palabrasOrdenadas[i])){
             puntos += 100/palabras.length;

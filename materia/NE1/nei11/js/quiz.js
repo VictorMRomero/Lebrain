@@ -8,6 +8,7 @@ let quiz = [
             "Un servicio para mejorar la velocidad de conexión a internet",
         ],
         answer: 2,
+        retro: "El alojamiento web es un servicio que almacena su sitio web o aplicación web y lo hace fácilmente accesible a través de diferentes dispositivos como el escritorio, el móvil y las tabletas."
     },
     {
         question: "¿Qué es una navegador?",
@@ -18,6 +19,7 @@ let quiz = [
             "Programa que permite navegar por internet u otra red informática de comunicaciones.",
         ],
         answer: 4,
+        retro:"Un navegador web es un programa que permite ver la información que contiene una página web."
     },
     {
         question: "¿Qué es un dominio?",
@@ -28,6 +30,7 @@ let quiz = [
             "Una herramienta para analizar el tráfico de la página web",
         ],
         answer: 3,
+        retro:"Un nombre de dominio (a menudo denominado simplemente dominio) es un nombre fácil de recordar asociado a una dirección IP física de Internet. "
     },
     {
         question:
@@ -39,6 +42,7 @@ let quiz = [
             "Un tipo de dominio",
         ],
         answer: 2,
+        retro:"Un hosting es un servicio de alojamiento web que te permite publicar un sitio web o aplicación en Internet."
     },
     {
         question:
@@ -50,6 +54,7 @@ let quiz = [
             "Una técnica para mejorar el rendimiento de la página web",
         ],
         answer: 3,
+        retro:"Es una forma de realizar transacciones comerciales en línea, el comercio electrónico se refiere a la compra y venta de productos y servicios a través de Internet",
     },
     {
         question: "¿Qué es un servidor?",
@@ -60,6 +65,7 @@ let quiz = [
             "Un programa para navegar por internet",
         ],
         answer: 3,
+        retro:"Un servidor es un conjunto de computadoras capaces de atender las peticiones de un cliente y devolverle una respuesta en concordancia."
     },
     {
         question: "¿Qué es el protocolo HTTPS?",
@@ -70,6 +76,7 @@ let quiz = [
             "Una técnica para mejorar el rendimiento de la página web",
         ],
         answer: 2,
+        retro:"El protocolo de transferencia de hipertexto seguro (HTTPS) es la versión segura de HTTP, que es el principal protocolo utilizado para enviar datos entre un navegador web y un sitio web. "
     },
     {
         question:
@@ -81,6 +88,7 @@ let quiz = [
             "Una herramienta para analizar el tráfico de la página web",
         ],
         answer: 3,
+        retro:"Un nombre de dominio es lo que las personas escriben en sus navegadores para encontrar un sitio web"
     },
     {
         question: "¿Qué es el correo electrónico?",
@@ -91,6 +99,7 @@ let quiz = [
             "Una herramienta para analizar el tráfico de la página web",
         ],
         answer: 2,
+        retro:"El correo electrónico o e-mail es un servicio en línea que, al igual que ocurre con el correo postal tradicional, nos permite enviar y recibir mensajes a través de un servicio de red a múltiples destinatarios."
     },
     {
         question: "¿Qué es un certificado SSL?",
@@ -101,6 +110,7 @@ let quiz = [
             "Una técnica para mejorar el rendimiento de la página web",
         ],
         answer: 2,
+        retro:"SSL es una tecnología estandarizada que permite cifrar el tráfico de datos entre un navegador web y un sitio web (o entre dos servidores web), protegiendo así la conexión."
     },
     {
         question: "¿Qué es la nube?",
@@ -111,5 +121,14 @@ let quiz = [
             "Una técnica para mejorar el rendimiento de la página web",
         ],
         answer: 1,
+        retro:"La nube es una plataforma de almacenamiento de datos ilimitada que se aloja en la web."
     },
 ];
+
+
+
+
+
+
+
+

@@ -104,3 +104,5 @@ let quiz = [
         answer: 4,
     },
 ];
+
+var palabras = ["Búsqueda del producto", "Selección del producto", "Proceso de pago", "Confirmación de la compra", "Entrega del producto", "Servicio postventa"];

@@ -113,3 +113,5 @@ let quiz = [
         answer: 4,
     },
 ];
+
+let palabras = ["Plataformas abiertas", "Negocios electrónicos", "Integración", "Flexibilidad", "Personalización"];

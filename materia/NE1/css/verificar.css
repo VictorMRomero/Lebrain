@@ -1,0 +1,154 @@
+/*PEN STYLES*/
+* {
+	box-sizing: border-box;
+    font-family: 'Tilt Neon';
+
+}
+.titulo{
+    text-align: center;
+}
+#bienvenida p {
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+body {
+	background: #f1f1f1;
+	margin: 2rem;
+}
+
+.blog-card {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem auto;
+	box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+	margin-bottom: 1.6%;
+	background: #fff;
+	line-height: 1.4;
+	font-family: sans-serif;
+	border-radius: 5px;
+	overflow: hidden;
+    width: 70%;
+	z-index: 0;
+}
+
+.blog-card a {
+	color: inherit;
+}
+
+.blog-card a:hover {
+	color: #5ad67d;
+}
+
+
+
+
+
+.blog-card .description {
+	padding: 1rem;
+	background: #fff;
+	position: relative;
+	z-index: 1;
+}
+
+
+.blog-card .description h1 {
+	line-height: 2;
+	margin: 0;
+	font-size: 1.7rem;
+}
+
+.blog-card .description h2 {
+	font-size: 1rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #a2a2a2;
+	margin-top: 5px;
+}
+
+.blog-card p {
+	position: relative;
+	margin: 1rem 0 0;
+}
+
+.blog-card p:first-of-type {
+	margin-top: 1.25rem;
+}
+
+.blog-card p:first-of-type:before {
+	content: "";
+	position: absolute;
+	height: 5px;
+	background: #5ad67d;
+	width: 80px;
+	top: -0.75rem;
+	border-radius: 3px;
+}
+
+
+
+@media (min-width: 640px) {
+
+
+	.blog-card .description {
+		flex-basis: 60%;
+	}
+
+	.blog-card .description:before {
+		transform: skewX(-3deg);
+		content: "";
+		background: #fff;
+		width: 30px;
+		position: absolute;
+		left: -10px;
+		top: 0;
+		bottom: 0;
+		z-index: -1;
+	}
+
+	.blog-card.alt {
+		flex-direction: row-reverse;
+	}
+
+	.blog-card.alt .description:before {
+		left: inherit;
+		right: -10px;
+		transform: skew(3deg);
+	}
+
+	.blog-card.alt .details {
+		padding-left: 25px;
+	}
+}
+
+.boton{
+    width: 100%;
+    text-align: right;
+}
+
+#next-button {
+    
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px;
+    margin-right: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: right;	
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #31cc46;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  #next-button:hover {
+      background-color: #35df30; /* Green */
+      color: white;
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  #next-button:active {
+    background-color: #078b03;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }

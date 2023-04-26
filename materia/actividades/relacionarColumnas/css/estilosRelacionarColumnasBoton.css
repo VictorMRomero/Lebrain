@@ -65,15 +65,13 @@ body{
 }
 
 #main {
-    max-width: 960px;
+    width: 90%;
     margin: auto;
-    background: white;
+    background: rgb(255, 254, 254);
     border-radius: 8px;
     -webkit-border-radius: 8px;
-    padding: 20px;
     box-shadow: 0 0px 0px #9c9c9c;
     -webkit-box-shadow: 0 0px 0px #9c9c9c;
-    position:relative;
 }
 /* Extras */
 .tablaEjercicio {

@@ -1,0 +1,27 @@
+* {
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+.opciones.active{
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid rgb(0, 8, 53);
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    padding: 10px 80px;
+    background: rgb(1, 42, 117);
+    margin-bottom: 10px;
+}
+
+.opciones{
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid rgb(0, 8, 53);
+    border-radius: 50px;
+}
+
+.btn{
+    border-radius: 18px;
+}

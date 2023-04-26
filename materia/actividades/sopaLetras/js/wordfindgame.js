@@ -223,6 +223,9 @@
         }
 
         if (wordList.length === 0) {
+          let nextButton = document.getElementById('next-button');
+          nextButton.textContent = 'Siguiente'
+          nextButton.disabled = false;
           $('.puzzleSquare').addClass('complete');
         }
       }

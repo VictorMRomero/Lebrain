@@ -1,0 +1,44 @@
+* {
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+.subtema {
+
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    line-height: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding: 6px;
+    margin: 15px;
+  }
+  
+  .subtema p {
+    margin: 0;
+    align-self: center;
+    
+  }
+  
+  .bloqueado{
+
+    width: 2em;
+    height: 2em;
+    position: left;
+    text-align: center;
+    border: none;
+    margin-left: auto;
+    background-image: url('https://img.icons8.com/fluency/48/null/private.png');
+    background-size: cover;
+  }
+
+
+  .haciendo{
+    background-image: url('https://img.icons8.com/fluency/48/null/enter-2.png');
+  }
+
+  .hecho{
+    background-image: url('https://img.icons8.com/fluency/48/null/checkmark.png'); 
+  }

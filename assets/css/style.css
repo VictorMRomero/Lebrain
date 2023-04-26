@@ -1,0 +1,257 @@
+* {
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+.col-md-5 {
+    height: 300px; /* ajusta el valor de acuerdo a tus necesidades */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+
+
+.ingresar {
+    --c: rgb(1, 42, 117);
+    color: var(--c);
+    font-size: 18px;
+    border: 0.3em solid var(--c);
+    border-radius: 1.5em;
+    width: 18em;
+    height: 3.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Tilt Neon';
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+    
+}
+.ingresar span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 30%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.05s);
+    z-index: -1;
+}
+
+.ingresar:hover {
+    color: wheat;
+}
+
+.ingresar:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.ingresar span:nth-child(1) {
+    --n: 1;
+}
+
+.ingresar span:nth-child(2) {
+    --n: 2;
+}
+
+.ingresar span:nth-child(3) {
+    --n: 3;
+}
+
+.ingresar span:nth-child(4) {
+    --n: 4;
+}
+
+.registrarse {
+    --c: rgb(1, 42, 117);
+    color: var(--c);
+    font-size: 18px;
+    border: 0.3em solid var(--c);
+    border-radius: 1.5em;
+    width: 18em;
+    height: 3.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Tilt Neon';
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+    
+}
+.registrarse span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.registrarse:hover {
+    color: wheat;
+}
+
+.registrarse:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.registrarse span:nth-child(1) {
+    --n: 1;
+}
+
+.registrarse span:nth-child(2) {
+    --n: 2;
+}
+
+.registrarse span:nth-child(3) {
+    --n: 3;
+}
+
+.registrarse span:nth-child(4) {
+    --n: 4;
+}
+
+
+
+.blog-card {
+	display: flex;
+	flex-direction: column;
+	margin: 2rem auto;
+	box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+	margin-bottom: 1.6%;
+	background: #fff;
+	line-height: 1.4;
+	border-radius: 5px;
+	overflow: hidden;
+    width: 80%;
+	z-index: 0;
+}
+
+.blog-card a {
+	color: inherit;
+}
+
+.blog-card a:hover {
+	color: #00ff48;
+}
+
+
+
+.blog-card .description {
+	padding: 1rem;
+	background: #fff;
+	position: relative;
+	z-index: 1;
+}
+
+
+.blog-card .description h1 {
+	line-height: 2;
+	margin: 0;
+	font-size: 1.7rem;
+}
+
+.blog-card .description h2 {
+	font-size: 1rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #a2a2a2;
+	margin-top: 5px;
+}
+
+.blog-card p {
+	position: relative;
+	margin: 1rem 0 0;
+}
+
+.blog-card p:first-of-type {
+	margin-top: 1.25rem;
+}
+
+.blog-card p:first-of-type:before {
+	content: "";
+	position: absolute;
+	height: 5px;
+	background: #5ad67d;
+	width: 15%;
+	top: -0.75rem;
+	border-radius: 3px;
+}
+
+
+
+@media (min-width: 640px) {
+
+
+	.blog-card .description {
+		flex-basis: 60%;
+	}
+
+	.blog-card .description:before {
+		transform: skewX(-3deg);
+		content: "";
+		background: #fff;
+		width: 30px;
+		position: absolute;
+		left: -10px;
+		top: 0;
+		bottom: 0;
+		z-index: -1;
+	}
+
+	.blog-card.alt {
+		flex-direction: row-reverse;
+	}
+
+	.blog-card.alt .description:before {
+		left: inherit;
+		right: -10px;
+		transform: skew(3deg);
+	}
+
+	.blog-card.alt .details {
+		padding-left: 25px;
+	}
+}
+.conBoton{
+    text-align: right;
+}
+.eliminar{
+    font-family: 'Tilt Neon';
+    padding: 8px 16px;
+    
+    font-size: 15px;
+    cursor: pointer;
+
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #cc3631;
+    border: none;
+    border-radius: 15px;
+
+}
+.eliminar:hover {
+    background-color: #f73e3e; /* Green */
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+

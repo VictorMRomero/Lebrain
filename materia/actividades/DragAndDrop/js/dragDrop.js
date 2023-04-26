@@ -1,4 +1,3 @@
-var palabras = ["Búsqueda del producto", "Selección del producto", "Proceso de pago", "Confirmación de la compra", "Entrega del producto", "Servicio postventa"];
             
             /** Drag and drop **/
 var dragSrcEl = null;
@@ -41,7 +40,7 @@ function handleDragEnd(e) {
     col.classList.remove('over');//eliminamos el borde rojo de todas las columnas
     });
 palabrasOrdenadas = [];
-var items = document.querySelectorAll(".ficha");
+var items = document.querySelectorAll(".correct");
 for (var i = 0; i < items.length; i++) {
     palabrasOrdenadas.push(items[i].textContent);
 }
@@ -66,7 +65,7 @@ botonVerificar.addEventListener("click", function() {
 
     var puntos = 0;
     var puntaje = 0;
-    console.log(palabrasOrdenadas);
+
     for(var i = 0; i < palabras.length; i++){
         if(palabrasOrdenadas[i] == palabras[i]){
             puntos += 100/palabras.length;
@@ -75,9 +74,20 @@ botonVerificar.addEventListener("click", function() {
     }
 
 
-
-    var resultado = document.getElementById('resultado');
+    let resultado = document.getElementById('resultado');
     resultado.innerHTML = "<p>Este es tu resultado: "+puntaje+"/100 </p>";
+    let nextButton = document.getElementById('next-button');
+    if(puntaje >= 60){
+        nextButton.textContent = 'Siguiente';
+        nextButton.disabled = false;
+    } else {
+        nextButton.textContent = 'Reintentar';
+        nextButton.disabled = false;
+        nextButton.addEventListener('click', function(event){
+            event.preventDefault();
+            window.location.reload();                 
+        })
+    }
 
 });
 

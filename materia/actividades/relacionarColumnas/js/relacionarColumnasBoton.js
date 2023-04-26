@@ -3,6 +3,7 @@
             "opcionIncorrectaTerminoIntentos":"Incorrecto, intenta con la siguiente pregunta.",
             "retroFinal":"Terminaste. Obtuviste %BUENAS% de %TOTAL%."
         };
+
         window.addEventListener("load", function(e){
             var MAX_INTENTOS_POR_PREGUNTA = 2;
             var filasReactivos = document.querySelectorAll(".tablaEjercicio tr");
@@ -56,11 +57,6 @@
 
             activarPregunta(preguntaActivaNum);
 
-            var botonReiniciar = document.querySelector("#botonReiniciar");
-            botonReiniciar.style.display = "none";
-            botonReiniciar.addEventListener("click", function(){
-                window.location.reload(false);
-            }, false);
 
             function alApretarOpcion(e){
                 e.stopPropagation();
@@ -96,7 +92,18 @@
                 if(preguntaActivaNum < filasReactivos.length){
                     activarPregunta(preguntaActivaNum);
                 } else {
-                    botonReiniciar.style.display = "inherit";
+                    let nextButton = document.getElementById('next-button');
+                    if(buenas >= 4 ){
+                        nextButton.textContent = 'Siguiente'
+                        nextButton.disabled = false;
+                    } else{
+                        nextButton.textContent = 'Reiniciar';
+                        nextButton.disabled = false;
+                        nextButton.addEventListener('click', function(event){
+                            event.preventDefault();
+                            window.location.reload();                            
+                        })
+                    }
                     retro.mostrar(reemplazarTexto(mensajes["retroFinal"], {"%BUENAS%": String(buenas), "%TOTAL%": String(filasReactivos.length)}));
                 }
             }
@@ -133,3 +140,6 @@
             }
             //console.log("prueba reemplazo: ", reemplazarTexto('My Name is %NAME% and my age is %AGE%, the following %TOKEN% is invalid. y gano el 10% de lo que tú',  {"%NAME%": "Mike","%AGE%": "26","%EVENT%": "20"}));
         }, false);
+
+
+        

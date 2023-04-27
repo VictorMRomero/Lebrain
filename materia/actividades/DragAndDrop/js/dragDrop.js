@@ -70,6 +70,9 @@ botonVerificar.addEventListener("click", function() {
         if(palabrasOrdenadas[i] == palabras[i]){
             puntos += 100/palabras.length;
             puntaje = Math.floor(puntos);
+            cols[i].style.backgroundColor = "green";
+        }else{
+            cols[i].style.backgroundColor = "red";
         }
     }
 

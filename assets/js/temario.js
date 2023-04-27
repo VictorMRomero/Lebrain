@@ -50,7 +50,15 @@ function mostrarSubtemas(dataSubtemas){
         let ponerSubtema = document.getElementById("segundoSubtema");
         
         ponerSubtema.innerHTML += `<div class="subtema"><p>${subtemaData.nombre}</p><button class="bloqueado" id="${subtemaData._id}"></button></div>`
-    }
+    } if(subtemaData.nombre[0] === "3"){
+      let ponerSubtema = document.getElementById("tercerSubtema");
+      
+      ponerSubtema.innerHTML += `<div class="subtema"><p>${subtemaData.nombre}</p><button class="bloqueado" id="${subtemaData._id}"></button></div>`
+    } if(subtemaData.nombre[0] === "4"){
+      let ponerSubtema = document.getElementById("cuartoSubtema");
+      
+      ponerSubtema.innerHTML += `<div class="subtema"><p>${subtemaData.nombre}</p><button class="bloqueado" id="${subtemaData._id}"></button></div>`
+    } 
 
 
   }
@@ -125,7 +133,7 @@ function mostrarSubtemas(dataSubtemas){
           for (let i = 0; i < botonBloqueado.length; i++) {
             botonBloqueado[i].addEventListener('click', function() {
               // Aquí puede agregar la funcionalidad que desea para cada botón
-              alert('Aun no tienes disponible este elemento, pasa el anterior para desbloquear');
+              alert('Aun no tienes disponible este elemento, pasa el anterior para desbloquear.');
             });
           }
 

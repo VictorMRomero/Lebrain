@@ -164,7 +164,8 @@
   width: auto;
 }
 .indicaciones li {
-  font-size: 22px;
+  margin-top: 30px;
+  font-size: 20px;
 }
 @media only screen and (max-width: 600px) {
   .conteinerBotonBarra{
@@ -184,7 +185,7 @@
     margin-left: 0;
   }
   .img-2{
-    width: 50%;
+    width: 40%;
   }
 }
 #finalizar {

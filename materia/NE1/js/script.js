@@ -9,11 +9,11 @@ let idSigSubtema = todosSubtemas.subtemas[+numSubtema+1]._id;
 
 
 let index = 0;
-let attempt = 1;
+let attempt = 0;
 let score = 0;
 let wrong = 0;
 let malas = [];
-let totalQuestions = 10;
+let totalQuestions = 6;
 let attempts = 1; // agregar variable attempts
 
 //========================= Actualizar Usuario =============================================
@@ -197,7 +197,7 @@ function checkAnswer(option){
         malas.push(questions[index]);
         
     }
-    $(".scoreBox span").text((score * 10))
+    $(".scoreBox span").text(Math.floor(score * (100/6)))
     $(".optionBox span").attr("onclick", "") // prevent selecting a different answer
     
     setTimeout(function() {
@@ -210,7 +210,7 @@ function checkAnswer(option){
 // Show next Question
 let num = 1
 function showNext(){
-    if(index <= 8)
+    if(index <= 4)
     {
         index++;
         num++;
@@ -241,13 +241,13 @@ function showResult(j){
 function result()
 {
         // questionScreen.style.display = "none";
-
+        score = Math.floor(score * (100/6))
         $("#totalQuestion").text(totalQuestions)
         $("#questionScreen").hide()
-        $(".scoreBoard span").text((score * 10))
+        $(".scoreBoard span").text(score)
         $("#resultScreen").show()
         $("#attemptQuestion").text(attempt)
-        $("#correctQuestion").text(score)
+        $("#correctQuestion").text(Math.floor(score))
         $("#wrongAnswers").text(wrong)
         // resultScreen.style.display = "block";
 
@@ -257,9 +257,8 @@ function result()
         
  
         attempts = localStorage.getItem('attempts')
-        
-  
-        if (score <= 6 && attempts < 2) { // si puntaje menor a 6 y es el primer intento
+
+        if (score <= 60 && attempts < 2) { // si puntaje menor a 6 y es el primer intento
           $(".mensaje span").text("Lo siento, tienes menos de 60 puntos. Tienes una segunda oportunidad.");
           siguiente.textContent = "Reintentar";
           attempts++; // aumentar el número de intentos
@@ -268,7 +267,7 @@ function result()
             window.location.href = "questions.html";
           });
 
-        } else if(score <= 6   && attempts >= 2){
+        } else if(score <= 60   && attempts >= 2){
           $(".mensaje span").text("Lo siento, tienes menos de 60 puntos. Y ya no tienes otra oportunidad");
           siguiente.textContent = "Verificar respuestas";
           attempts = 1;
@@ -279,7 +278,7 @@ function result()
             
             window.location.href = "../verificar.html";
           });
-        } else if(score >= 6){
+        } else if(score >= 60){
           $(".mensaje span").text("Fantastico, puedes avanzar al siguiente tema");
           siguiente.textContent = "Terminar";
           ocultar.style.display = 'none';

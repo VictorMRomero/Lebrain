@@ -60,7 +60,7 @@
 
 .card {
 
-  width: 80%;
+  width: 70%;
   height: 450px;
   margin: 0 auto; /* Centrar la tarjeta */
   padding: 0 20px; /* Agregar un poco de espacio a los lados */
@@ -91,7 +91,7 @@
 .card p {
   position: relative;
   font-family: 'Tilt Neon', sans-serif;
-  font-size: 20px;
+  font-size: 23px;
   margin-bottom: 5px;
   text-align: justify;
 }
@@ -155,11 +155,16 @@
 
 }
 .img-2{
-  width: 30%;
+  width: 40%;
+  margin: auto;
+
 }
 .indicaciones{
   margin-left: 10%;
   width: auto;
+}
+.indicaciones li {
+  font-size: 22px;
 }
 @media only screen and (max-width: 600px) {
   .conteinerBotonBarra{

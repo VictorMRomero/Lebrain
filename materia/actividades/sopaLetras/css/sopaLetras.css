@@ -4,18 +4,21 @@
 
 #juego {
     border: 2px solid rgb(131, 131, 131);
+    width: auto;
     border-radius: 10px;
     padding: 10px;
     float: left;
     margin: 10px 20px;
+    overflow: hidden;
 }
 
 
 
 #juego div {
-    width: 400px;
+    width: auto;
     margin: 0 auto;
 }
+
 
 
 /* style for each square in the puzzle */
@@ -30,18 +33,27 @@
     transition: background-color 0.6s;
     height: 40px;
     width: 40px;
-  }
-  .letras button:hover {
+}
+.letras button:hover {
     background-color: #2e8131;
-  }
-  
-  .letras .b-resolver .resolver{
+}
+
+.letras .b-resolver .resolver{
     background-color: #57ff51;
     text-align: left;
     height: 40px;
     width: 100px;
-  }
+}
 
+@media only screen and (max-width: 600px) {
+    #juego{
+        width: 100%;
+    }
+    .letras button {
+        height: 40px;
+        width: 40px;
+    }
+}
 
 /* indicates when a square has been selected */
 

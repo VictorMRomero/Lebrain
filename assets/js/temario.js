@@ -98,8 +98,8 @@ function mostrarSubtemas(dataSubtemas){
 
           
           if(Subtema.calificacion === 0){
-
             boton.classList.add("haciendo");
+            boton.classList.remove('bloqueado');
             //Abrimos el acordeon de la actividad que vayamos realizando
             botonCollapse.classList.remove('collapsed');
             divContenedor.classList.add("show");
@@ -107,20 +107,27 @@ function mostrarSubtemas(dataSubtemas){
 
             boton.addEventListener('click', (e) => {
               e.preventDefault()
-              window.location.href = data.link;
               localStorage.setItem('idSubtema', idSubtema);
               localStorage.setItem('linkSubtema', data.link);
               localStorage.setItem('numSubtema', j);
-
+              window.location.href = data.link;
+              
             })
-          } if(Subtema.calificacion > 6){
+          } if(Subtema.calificacion > 60){
             boton.classList.add('hecho');
+            boton.classList.remove('bloqueado');
             boton.addEventListener('click', (e) => {
               e.preventDefault();
               alert('Ya realizaste el objeto, vamos por el siguiente');
             })
           } 
-
+          let botonBloqueado = document.querySelectorAll('.bloqueado');
+          for (let i = 0; i < botonBloqueado.length; i++) {
+            botonBloqueado[i].addEventListener('click', function() {
+              // Aquí puede agregar la funcionalidad que desea para cada botón
+              alert('Aun no tienes disponible este elemento, pasa el anterior para desbloquear');
+            });
+          }
 
 
 

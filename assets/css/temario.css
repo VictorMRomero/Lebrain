@@ -36,9 +36,38 @@
 
 
   .haciendo{
+    width: 2em;
+    height: 2em;
+    position: left;
+    text-align: center;
+    border: none;
+    margin-left: auto;
     background-image: url('https://img.icons8.com/fluency/48/null/enter-2.png');
+    background-size: cover;
   }
 
   .hecho{
+    width: 2em;
+    height: 2em;
+    position: left;
+    text-align: center;
+    border: none;
+    margin-left: auto;
     background-image: url('https://img.icons8.com/fluency/48/null/checkmark.png'); 
+    background-size: cover;
+  } 
+
+  @media only screen and (max-width: 600px) {
+    .bloqueado,
+    .haciendo,
+    .hecho {
+      width: 1.3em;
+      height: 1.3em;
+    }
   }
+
+  
+  
+  
+  
+  

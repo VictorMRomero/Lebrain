@@ -72,6 +72,7 @@ function mostrarSubtemas(dataSubtemas){
   let totalMateriasUsuario = user.materias.length;
 
   for(let i = 0; i < totalMateriasUsuario; i++){
+
     if(user.materias[i].materia === idMateria){
 
       let totalSubtemas = user.materias[i].subtemas.length;
@@ -106,8 +107,8 @@ function mostrarSubtemas(dataSubtemas){
 
           
           if(Subtema.calificacion === 0){
-            boton.classList.add("haciendo");
             boton.classList.remove('bloqueado');
+            boton.classList.add("haciendo");
             //Abrimos el acordeon de la actividad que vayamos realizando
             botonCollapse.classList.remove('collapsed');
             divContenedor.classList.add("show");
@@ -121,32 +122,28 @@ function mostrarSubtemas(dataSubtemas){
               window.location.href = data.link;
               
             })
-          } if(Subtema.calificacion > 60){
-            boton.classList.add('hecho');
+          } if(Subtema.calificacion >= 60){
             boton.classList.remove('bloqueado');
+            boton.classList.add('hecho');
             boton.addEventListener('click', (e) => {
               e.preventDefault();
               alert('Ya realizaste el objeto, vamos por el siguiente');
             })
-          } 
-          let botonBloqueado = document.querySelectorAll('.bloqueado');
-          for (let i = 0; i < botonBloqueado.length; i++) {
-            botonBloqueado[i].addEventListener('click', function() {
-              // Aquí puede agregar la funcionalidad que desea para cada botón
-              alert('Aun no tienes disponible este elemento, pasa el anterior para desbloquear.');
-            });
-          }
+          } else {
+            let botonBloqueado = document.querySelectorAll('.bloqueado');
+            for (let i = 0; i < botonBloqueado.length; i++) {
+              botonBloqueado[i].addEventListener('click', function() {
+                // Aquí puede agregar la funcionalidad que desea para cada botón
+                alert('Aun no tienes disponible este elemento, pasa el anterior para desbloquear.');
+              });
+            }
+          } //if
+        }//funcion mostrar subtemas
+      }//for                
+    }//if
+  }//for
+  
 
-
-
-        }
-
-      }
-
-
-    }
-
-  }
 }
   
 

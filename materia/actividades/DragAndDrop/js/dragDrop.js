@@ -56,6 +56,7 @@ for (var i = 0; i < items.length; i++) {
     col.addEventListener('drop', handleDrop, false);
     col.addEventListener('dragend', handleDragEnd, false);
 });
+console.log(palabrasOrdenadas)
 
 let botonVerificar = document.getElementById("verificar");
 botonVerificar.addEventListener("click", function() {
@@ -67,7 +68,9 @@ botonVerificar.addEventListener("click", function() {
     var puntaje = 0;
 
     for(var i = 0; i < palabras.length; i++){
+
         if(palabrasOrdenadas[i] == palabras[i]){
+            //console.log(`${palabrasOrdenadas[i]} es igual a ${palabras[i]}`)
             puntos += 100/palabras.length;
             puntaje = Math.floor(puntos);
             cols[i].style.backgroundColor = "green";

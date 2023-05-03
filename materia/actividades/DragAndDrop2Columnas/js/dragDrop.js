@@ -1,8 +1,8 @@
-var palabras = ["Plataformas abiertas", "Negocios electrónicos", "Integración", "Flexibilidad", "Personalización"];
             
             /** Drag and drop **/
 var dragSrcEl = null;
 var cols = document.querySelectorAll('.ficha');
+let correctas = document.querySelectorAll('.correct')
 var palabrasOrdenadas = []
 
 //guardamos el contenido que queremos cambiar para la transferencia al dejar de arrastrar
@@ -57,11 +57,12 @@ for (var i = 0; i < items.length; i++) {
     col.addEventListener('drop', handleDrop, false);
     col.addEventListener('dragend', handleDragEnd, false);
 });
+console.log(palabrasOrdenadas)
 
 let botonVerificar = document.getElementById("verificar");
 botonVerificar.addEventListener("click", function() {
     for (var i = 0; i < cols.length; i++){
-        cols[i].setAttribute("draggable", "false");
+        cols[0].setAttribute("draggable", "false");
     }
 
     var puntos = 0;
@@ -69,15 +70,28 @@ botonVerificar.addEventListener("click", function() {
 
     for(var i = 0; i < palabras.length; i++){
         if(palabras.includes(palabrasOrdenadas[i])){
+            console.log(palabrasOrdenadas[i]);
             puntos += 100/palabras.length;
-            puntaje = Math.floor(puntos);
+            correctas[i].style.backgroundColor = "green";
         }
+        puntaje = Math.floor(puntos);
     }
 
 
-
-    var resultado = document.getElementById('resultado');
-    resultado.innerHTML = "<p>Este es tu resultado: "+puntaje+"/100 </p>";
+    let resultado = document.getElementById('resultado');
+    resultado.innerHTML = "<p>Este es tu resultado: "+puntaje+"/100 Puedes avanzar</p>";
+    let nextButton = document.getElementById('next-button');
+    if(puntaje >= 60){
+        nextButton.textContent = 'Siguiente';
+        nextButton.disabled = false;
+    } else {
+        nextButton.textContent = 'Reintentar';
+        nextButton.disabled = false;
+        nextButton.addEventListener('click', function(event){
+            event.preventDefault();
+            window.location.reload();                 
+        })
+    }
 
 });
 

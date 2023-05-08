@@ -1,115 +1,82 @@
-let quiz = [
+const quiz = [
     {
-        question: "¿Qué es el e-commerce?",
+      question: "¿Qué es la arquitectura tecnológica de los negocios electrónicos?",
+      option: [
+      "El diseño de la estructura física de una empresa",
+      "La estructura técnica de una empresa",
+      "El diseño de la página web de una empresa",
+      "El diseño de la publicidad en línea de una empresa",
+      ],
+      answer: 2,
+      retro: "La arquitectura tecnológica de los negocios electrónicos se refiere a la estructura técnica de una empresa que facilita la realización de transacciones y el manejo de información en línea."
+    },
+    {
+      question: "¿Qué es el hardware en la arquitectura tecnológica de los negocios electrónicos?",
+      option: [
+        "El software utilizado en una empresa",
+        "El conjunto de dispositivos físicos utilizados para el procesamiento de datos",
+        "La conexión a internet",
+        "El diseño de la página web",
+      ],
+      answer: 2,
+      retro: "El hardware en la arquitectura tecnológica de los negocios electrónicos se refiere al conjunto de dispositivos físicos, como servidores, dispositivos de almacenamiento y dispositivos de red, utilizados para el procesamiento de datos."
+    },
+    {
+      question: "¿Qué es un servidor en la arquitectura tecnológica de los negocios electrónicos?",
+      option: [
+        "Un dispositivo que permite la conexión a internet",
+        "Un dispositivo de almacenamiento de información",
+        "Un dispositivo que procesa y entrega información",
+        "Un dispositivo de seguridad informática",
+      ],
+      answer: 3,
+      retro: "Un servidor en la arquitectura tecnológica de los negocios electrónicos es un dispositivo que procesa y entrega información a través de la red. Puede alojar sitios web, aplicaciones y bases de datos, y proporcionar servicios como el correo electrónico y el almacenamiento en línea." 
+    },
+  
+    {
+      question: "¿Qué es un balanceador de carga en la arquitectura tecnológica de los negocios electrónicos?",
+      option: [
+        "Un dispositivo que distribuye el tráfico de red entre varios servidores",
+        "Un dispositivo que protege la red contra ataques externos",
+        "Un dispositivo que almacena copias de seguridad de la información",
+        "Un dispositivo que procesa y almacena información en la nube",
+        ],
+        answer: 1,
+        retro: "Un balanceador de carga en la arquitectura tecnológica de los negocios electrónicos es un dispositivo que distribuye el tráfico de red entre varios servidores, asegurando que el flujo de tráfico se equilibre entre ellos y evitando la sobrecarga en un solo servidor."
+    },
+  
+    {
+        question: "¿Qué es un cortafuegos en la arquitectura tecnológica de los negocios electrónicos?",
         option: [
-            "Una forma de hacer negocios por internet",
-            "La venta de bienes y servicios por internet",
-            "La creación de relaciones comerciales por internet",
-            "Un sistema de pago electrónico",
+          "Un dispositivo que procesa y entrega información a través de la red",
+          "Un dispositivo que distribuye el tráfico de red entre varios servidores",
+          "Un dispositivo que protege la red contra ataques externos",
+          "Un dispositivo que almacena copias de seguridad de la información",
         ],
-        answer: 2,
+        answer: 3,
+        retro: "Un cortafuegos en la arquitectura tecnológica de los negocios electrónicos es un dispositivo que protege la red contra ataques externos, restringiendo el acceso no autorizado y permitiendo sólo el tráfico permitido"
     },
     {
-        question: "¿Qué es el e-business?",
-         option: [
-            "Una forma de hacer negocios por internet",
-            "La venta de bienes y servicios por internet",
-            "La creación de relaciones comerciales por internet",
-            "Un sistema de pago electrónico",
-        ],
-        answer: 1,
+      question: "¿Por qué es importante la redundancia en la arquitectura de hardware?",
+      option: [
+        "Para ahorrar costos en la implementación de hardware",
+        "Para mejorar la velocidad de procesamiento de la información",
+        "Para garantizar la continuidad del negocio en caso de fallos en el hardware",
+        "Para mejorar la seguridad del sistema"
+      ],
+      answer: 3,
+      retro: "La redundancia es importante porque garantiza la continuidad del negocio en caso de fallos en el hardware, permitiendo la recuperación rápida de los sistemas y datos afectados."
     },
     {
-        question: "¿Cuál es la principal diferencia entre e-commerce y e-business?",
-         option: [
-            "El tipo de bienes y servicios que se venden",
-            "El número de clientes que se pueden atender",
-            "La forma en que se relaciona con los clientes",
-            "El alcance de las actividades comerciales",
-        ],
-        answer: 4,
+      question: "¿Cuál es la función de los servidores en la arquitectura de hardware?",
+      option: [
+        "Ejecutar aplicaciones y almacenar datos",
+        "Enviar y recibir correos electrónicos",
+        "Realizar copias de seguridad de los datos",
+        "Conectar los dispositivos de red de la empresa"
+      ],
+      answer: 1,
+      retro: "Los servidores tienen la función de ejecutar aplicaciones y almacenar datos, permitiendo a los usuarios acceder a ellos de forma remota a través de diferentes dispositivos y plataformas."
     },
-    {
-        question:
-            "¿Qué es el customer relationship management (CRM)?",
-         option: [
-            "La venta de productos y servicios por internet",
-            "La gestión de las relaciones con los clientes",
-            "La promoción de productos y servicios por internet",
-            "La publicidad en medios tradicionales",
-        ],
-        answer: 2,
-    },
-    {
-        question:
-            "¿Cuál de las siguientes opciones NO es un beneficio de los ecommerce?",
-         option: [
-            "Mayor comodidad para los clientes",
-            "Mayor alcance geográfico para los negocios",
-            "Menores costos de operación para los negocios",
-            "Menor calidad de los productos vendidos",
-        ],
-        answer: 4,
-    },
-    {
-        question: "¿Cuál de las siguientes opciones es una medida de seguridad para los ecommerce?",
-         option: [
-            "Certificado SSL",
-            "Uso de contraseñas débiles",
-            "Compartir información confidencial por correo electrónico",
-            "No utilizar ningún tipo de protección",
-        ],
-        answer: 1,
-    },
-    {
-        question: "¿Cuál es una de las principales preocupaciones de los clientes en relación a los ecommerce?",
-         option: [
-            "La calidad de los productos vendidos",
-            "La seguridad de la información personal y financiera",
-            "La disponibilidad de productos en stock",
-            "La facilidad de uso del sitio web",
-        ],
-        answer: 2,
-    },
-    {
-        question:
-            "¿Cuál es un ejemplo de una plataforma de comercio electrónico utilizada en un ebusiness?",
-         option: [
-            "Instagram",
-            "LinkedIn",
-            "Amazon",
-            "Ninguna de las anteriores",
-        ],
-        answer: 4,
-    },
-    {
-        question: "¿Cuál es un ejemplo de un modelo de negocio utilizado en un ebusiness?",
-         option: [
-            "B2B (business-to-business)",
-            "B2C (business-to-consumer)",
-            "C2C (consumer-to-consumer)",
-            "Todas las anteriores",
-        ],
-        answer: 4,
-    },
-    {
-        question: "¿Cuál es un ejemplo de un sistema de gestión de relaciones con el cliente (CRM) utilizado en un ebusiness?",
-         option: [
-            "Salesforce",
-            "Dropbox",
-            "PayPal",
-            "Ninguna de las anteriores",
-        ],
-        answer: 4,
-    },
-    {
-        question: "¿Cuál es un ejemplo de un software de gestión de contenido utilizado en un ebusiness?",
-         option: [
-            "Adobe Photoshop",
-            "Microsoft Word",
-            "WordPress",
-            "Ninguna de las anteriores",
-        ],
-        answer: 4,
-    },
-];
+    
+  ]  

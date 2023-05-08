@@ -1,0 +1,26 @@
+
+img.card-img-top {
+    
+    object-fit: cover;
+    cursor: pointer;
+    max-height: 130px !important;
+    max-width: 130px !important;
+}
+
+img.card-img-top.girar {
+    animation: fadein 3s;
+}
+
+.img-container {
+    margin: 0.1rem;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+
+}

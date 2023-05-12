@@ -1,74 +1,49 @@
 let quiz = [
     {
-        question: "¿Qué es el e-commerce?",
+        question: "¿Cuál es la ventaja de utilizar plataformas abiertas en los negocios electrónicos?",
         option: [
-            "Una forma de hacer negocios por internet",
-            "La venta de bienes y servicios por internet",
-            "La creación de relaciones comerciales por internet",
-            "Un sistema de pago electrónico",
+        "Mayor seguridad en la transmisión de datos",
+        "Menor costo en la implementación de la solución",
+        "Mayor integración con otros sistemas de la empresa",
+        "Mejor experiencia de usuario en la plataforma"
         ],
         answer: 2,
-        retro: "El comercio electrónico se refiere a la compra y venta de bienes y servicios a través de Internet."
+        retro: "La utilización de plataformas abiertas en los negocios electrónicos puede reducir significativamente el costo de implementación de la solución, ya que no se requiere el pago de licencias o cánones de uso de software propietario."
     },
     {
-        question: "¿Qué es el e-business?",
-         option: [
-            "Una forma de hacer negocios por internet",
-            "La venta de bienes y servicios por internet",
-            "La creación de relaciones comerciales por internet",
-            "Un sistema de pago electrónico",
+        question: "¿Qué ventajas ofrecen las plataformas abiertas en comparación con las plataformas propietarias?",
+        option: [
+        "Menor costo y mayor flexibilidad",
+        "Mayor seguridad y mejor soporte técnico",
+        "Mayor personalización y menor riesgo de errores",
+        "Mayor velocidad de procesamiento y mejor integración de sistemas"
         ],
         answer: 1,
-        
-retro: "E-bussines se refiere al uso de la tecnología de la información y las comunicaciones (TIC) para realizar actividades comerciales. Incluye la gestión de relaciones con los clientes, la gestión de cadenas de suministro y la realización de transacciones comerciales en línea."
+        retro: "Las plataformas abiertas suelen ofrecer menor costo y mayor flexibilidad, ya que permiten la personalización y adaptación a las necesidades de cada negocio, así como la integración con otras soluciones y herramientas."
     },
     {
-        question: "¿Cuál es la principal diferencia entre e-commerce y e-business?",
-         option: [
-            "El tipo de bienes y servicios que se venden",
-            "El número de clientes que se pueden atender",
-            "La forma en que se relaciona con los clientes",
-            "El alcance de las actividades comerciales",
+        question: "¿Cuál es una de las características principales de las plataformas abiertas?",
+        option: [
+        "Son exclusivas para desarrolladores expertos",
+        "Solo son accesibles a través de software propietario",
+        "Permiten la colaboración y el intercambio de información",
+        "Son muy costosas en comparación con otras opciones"
         ],
-        answer: 4,
-        retro: "El e-commerce se enfoca en la venta en línea de bienes y servicios, mientras que el e-business incluye un conjunto más amplio de actividades comerciales que utilizan tecnologías de la información y las comunicaciones, como la gestión de relaciones con los clientes y la cadena de suministro."
+        answer: 3,
+        retro: "Las plataformas abiertas permiten la colaboración y el intercambio de información entre los usuarios y desarrolladores, lo que las hace ideales para comunidades de desarrollo y proyectos colaborativos."
     },
     {
-        question:
-            "¿Qué es el customer relationship management (CRM)?",
-         option: [
-            "La venta de productos y servicios por internet",
-            "La gestión de las relaciones con los clientes",
-            "La promoción de productos y servicios por internet",
-            "La publicidad en medios tradicionales",
+        question: "¿Qué es una plataforma abierta?",
+        option: [
+          "Una plataforma que sólo permite el acceso a usuarios autorizados",
+          "Una plataforma que permite la integración de software y aplicaciones de terceros",
+          "Una plataforma que sólo se ejecuta en un sistema operativo específico",
+          "Una plataforma que no requiere conexión a Internet"
         ],
         answer: 2,
-        
-        retro: "El CRM, o Gestión de Relaciones con los Clientes, es un conjunto de prácticas, estrategias y tecnologías utilizadas por las empresas para gestionar y analizar las interacciones con sus clientes y potenciales clientes. Su objetivo es mejorar las relaciones con los clientes, aumentar su satisfacción y fidelidad, y por ende, incrementar la rentabilidad de la empresa."
+        retro: "Una plataforma abierta es aquella que permite la integración de software y aplicaciones de terceros, lo que la hace más flexible y adaptable a las necesidades de cada negocio."
     },
-    {
-        question:
-            "¿Cuál de las siguientes opciones NO es un beneficio de los ecommerce?",
-         option: [
-            "Mayor comodidad para los clientes",
-            "Mayor alcance geográfico para los negocios",
-            "Menores costos de operación para los negocios",
-            "Menor calidad de los productos vendidos",
-        ],
-        answer: 4,
-        retro:"La calidad no tiene ninguna relación"
-    },
-    {
-        question: "¿Cuál de las siguientes opciones es una medida de seguridad para los ecommerce?",
-         option: [
-            "Certificado SSL",
-            "Uso de contraseñas débiles",
-            "Compartir información confidencial por correo electrónico",
-            "No utilizar ningún tipo de protección",
-        ],
-        answer: 1,
-        retro:"Un certificado SSL es un archivo que se instala en un servidor web para permitir conexiones seguras y encriptadas entre el servidor y los navegadores web. Su objetivo es garantizar que los datos transmitidos entre el servidor y el cliente estén protegidos y no puedan ser interceptados o modificados por terceros."
-    },
+
     {
         question:
             "¿Cuál es un ejemplo de una plataforma de comercio electrónico utilizada en un ebusiness?",

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lebrain-NEI33</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">   
+    <link rel="stylesheet" href="../../actividades/DragAndDrop/css/dragDrop.css">
+    <script src="../js/app.js"></script>
+    <!--Tipo de letra-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Tilt+Neon&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="loader"></div>
+    <div id="card-container">            
+        <div class = "conteinerBotonBarra">
+            <a href="../negociosElectronicos1.html"><button class="boton_x">X</button></a>
+            <div class="progress bar-pro" style="height: 18px;">
+                <div class="progress-bar progre" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" ></div>
+            </div>
+        </div> 
+
+        <div class="card active">
+            <h2>Modelos de negocio</h2>
+            <p>En términos simples, un modelo de negocio es una descripción de cómo una empresa genera ingresos y beneficios a través de la creación, entrega y captura de valor. En el contexto de los negocios electrónicos, el modelo de negocio se refiere a la forma en que una empresa crea y entrega valor a sus clientes a través de canales en línea.</p>
+            <img class = "img-1" src="../../../images/neon-young-man-and-woman-are-working-together-on-a-project.svg"></img>
+        </div>
+
+        <div class="card">
+            <h2>Modelos de negocio</h2>
+            <p>Es importante que las empresas elijan el modelo de negocio adecuado para sus objetivos y recursos. Algunas preguntas importantes que las empresas deben considerar incluyen: ¿Cómo se crea y entrega el valor al cliente? ¿Cómo se generan ingresos y beneficios? ¿Cuál es el público objetivo y cuáles son sus necesidades? ¿Cómo se diferenciará la empresa de la competencia?</p>
+            <img class="img-1" src="../../../images/colors-woman-working-with-financial-analytics.svg">
+        </div>
+
+        <div class="card">
+            <h2>Una vez establecido.</h2>
+            <p>Es importante seguir evaluando su efectividad y ajustarlo según sea necesario. Los cambios en la tecnología, el mercado y las necesidades del cliente pueden requerir ajustes en el modelo de negocio para mantener la relevancia y el éxito a largo plazo.</p>
+            <img class="img-1" src="../../../images/bubble-gum-happy-business-man-enjoys-growth-of-online-business.svg">
+        </div>
+
+        <div class="card">
+        <h2>El modelo de negocio B2B (business-to-business)</h2>
+        <p>En este modelo, una empresa vende sus productos o servicios a otra empresa que los utilizará en sus propias operaciones comerciales o los revenderá a sus clientes. El modelo B2B implica transacciones de mayor valor y es común en industrias como la manufactura, la tecnología, la construcción y la logística.</p>
+        <img class="img-2" src="../../../images/bendy-man-and-woman-discussing-an-idea.svg">
+        </div>
+
+        <div class="card">
+            <h2>El modelo de negocio B2C (Business to Consumer)</h2>
+            <p>es aquel en el que una empresa vende sus productos o servicios directamente a los consumidores finales. En este modelo, la empresa se enfoca en crear una experiencia de compra atractiva para el cliente, y en satisfacer sus necesidades y expectativas.<br>la empresa suele tener una presencia en línea a través de una página web o tienda virtual, que permite a los consumidores buscar y comprar productos o servicios en línea.</p>
+            <img class="img-2" src="../../../images/bubble-gum-woman-and-man-shake-hands-and-make-a-deal.svg">
+        </div>
+
+        <div class="card">
+            <h2>El modelo C2B (Consumer to Business)</h2>
+            <p>Es el opuesto del modelo B2C. En este caso, son los consumidores quienes ofrecen sus servicios o productos a las empresas. Un ejemplo de modelo C2B es el de plataformas de freelancers como Upwork o Fiverr, donde los trabajadores independientes ofrecen sus servicios a las empresas que los necesitan. También es común en plataformas de crowdfunding, donde los consumidores ofrecen su dinero para financiar proyectos empresariales.</p>
+            <img class="img-2" src="../../../images/bubble-gum-brainstorming.svg">
+        </div>
+
+        <div class="card">
+            <h2>El modelo de negocio C2C (consumer-to-consumer)</h2>
+            <p>se basa en la venta directa de productos o servicios entre consumidores. En otras palabras, una persona vende un producto o servicio a otra persona en un mercado en línea o sitio web especializado que facilita estas transacciones.<br>Un ejemplo de este modelo de negocio es eBay, donde los usuarios pueden comprar y vender productos a otros usuarios en la plataforma. Otro ejemplo es Etsy, un mercado en línea que se enfoca en productos hechos a mano y vintage.</p>
+            <img class="img-1" src="https://img.icons8.com/color/480/ebay.png" alt="ebay"/>
+        </div>
+
+        <div class="card">
+            <h2>Arrastra las palabras correctas a la casilla derecha</h2>
+            <table class="table  table-hover table-bordered ">
+                <caption>Mueve las palabras que creas tienen mas relacion con el tema: </caption>
+                <tr><td>Palabras</td><td>Correctas</td></tr>
+                <tr><td class="ficha" draggable="true">B2B</td><td class="ficha correct" draggable="true">C2B</td></tr>
+                <tr><td class="ficha" draggable="true">B2C</td><td class="ficha correct" draggable="true">D2C</td></tr>
+                <tr><td class="ficha" draggable="true">Captura de valor</td><td class="ficha correct" draggable="true">Marketing digital</td></tr>
+                <tr><td class="ficha" draggable="true">Pequeñas empresas</td><td class="ficha correct" draggable="true">D2D</td></tr>
+                <tr><td class="ficha" draggable="true">C2C</td><td class="ficha correct" draggable="true">Soluciones rentables</td></tr>
+            </table>
+
+            <div id="resultado"></div>            
+            <button id="verificar">Verificar</button>
+        </div>
+        
+        <div class="card Felicidades">
+            <h2>Felicidades, llegaste al final.</h2>
+            <h3>Vamos a realizar una pequeña prueba para reforzar lo aprendido:</h2>
+            <div class="contFeliz">
+                <ul class="indicaciones">
+                    <li>6 Preguntas (20 segundos cada una)</li>
+                    <li>Puntos por pregunta correcta</li>
+                    <li>200 segundos en el reloj</li>
+                    <li>Preguntas aleatorias</li>
+                    <li>Tu resultado al final</li>
+                </ul>
+                <img class = "img-2" src="../../../images/bubble-gum-done.svg"></img>
+            </div>
+        </div>            
+        <div class = "contBotonSig"><button id="next-button" type="button">Siguiente</button></div>
+    </div>
+</body>
+<script src="../../actividades/DragAndDrop2Columnas/js/dragDrop.js"></script>
+<script src="js/quiz.js"></script>
+</html>

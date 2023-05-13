@@ -139,7 +139,20 @@ function mostrarSubtemas(dataSubtemas){
             }
           } //if
         }//funcion mostrar subtemas
-      }//for                
+      }//for     
+      if(totalSubtemas === dataSubtemas.total){
+        let ponerSubtema = document.getElementById("cuartoSubtema");
+      
+        ponerSubtema.innerHTML += `<div class="subtema"><p>Certificado</p><button class="haciendo" id="certificado"></button></div>`;
+
+        let certificado = document.getElementById('certificado');
+        certificado.addEventListener('click', function() {
+          // Aquí puede agregar la funcionalidad que desea para cada botón
+          alert('aqui puedes descargar tu certificado');
+        });
+
+
+      }
     }//if
   }//for
   

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lebrain-NEI42</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">   
+    <link rel="stylesheet" href="../../actividades/DragAndDrop/css/dragDrop.css">
+    <!-- Librerias para generar el juego -->
+    <script src="../js/app.js"></script>
+    <!--Tipo de letra-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Tilt+Neon&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader"></div>
+    <div id="card-container">            
+        <div class = "conteinerBotonBarra">
+            <a href="../negociosElectronicos1.html"><button class="boton_x">X</button></a>
+            <div class="progress bar-pro" style="height: 18px;">
+                <div class="progress-bar progre" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" ></div>
+            </div>
+        </div> 
+
+        <div class="card active">
+            <h2>Sistemas de pago electrónico</h2>
+            <p>Son una forma cada vez más popular de realizar transacciones en línea de forma segura y conveniente. Básicamente, un sistema de pago electrónico es un software que permite a los usuarios realizar pagos y transferencias de dinero a través de Internet o de dispositivos móviles.</p>
+            <img class = "img-1" src="../../../images/bubble-gum-business-man-in-spaceship-catches-money-in-space.svg"></img>
+        </div>
+
+        <div class="card">
+            <h2>Cajeros electrónicos</h2>
+            <p>Son dispositivos electrónicos que permiten a los usuarios realizar transacciones bancarias sin la necesidad de acudir a una sucursal bancaria o interactuar con un cajero humano.<br>Los usuarios pueden utilizarlos para realizar una variedad de transacciones, como retirar efectivo, depositar cheques y transferir fondos entre cuentas.</p>
+            <img class = "img-1" src="../../../images/bubble-gum-man-puts-card-in-atm-machine (1).svg"></img>
+        </div>
+       
+        <div class="card">
+            <h2>Dinero electrónico</h2> 
+            <p>Es un medio de pago digital que se utiliza para realizar transacciones financieras a través de internet u otros medios electrónicos. Es un sistema de pago que funciona a través de una cuenta electrónica, que puede ser recargada con dinero desde una cuenta bancaria, una tarjeta de crédito o débito, o mediante una transferencia.</p>
+            <img class = "img-1" src="../../../images/bubble-gum-sitting-girl-is-mining-bitcoins-with-her-computer.svg"></img>
+        </div>
+
+        <div class="card">
+            <h2>Cheques electrónicos</h2>
+            <p>También conocidos como cheques virtuales o e-cheques, son una forma electrónica de pago que funciona de manera similar a los cheques tradicionales. En lugar de un papel físico, el cheque electrónico se emite y se procesa digitalmente.<br>Para utilizar un cheque electrónico, el pagador debe proporcionar la información necesaria, como el número de cuenta bancaria y la cantidad a pagar, a través de un sitio web o una aplicación móvil. El banco emisor del cheque electrónico luego transfiere los fondos al banco receptor del destinatario.</p>
+            <img class = "img-2" src="../../../images/bubble-gum-paper-money-and-coins.svg"></img>
+        </div>
+
+        
+        <div class="card">
+            <h2>Tarjetas de Crédito y debito </h2>
+            <p>Son formas de pago electrónico que permiten a los consumidores realizar compras sin efectivo. Las tarjetas de crédito permiten a los usuarios pedir prestado dinero para hacer una compra, mientras que las tarjetas de débito permiten a los usuarios gastar solo el dinero que ya tienen en su cuenta bancaria.</p>
+            <img class = "img-2" src="../../../images/wavy-girl-made-purchases-with-a-credit-card.svg"></img>
+        </div>
+
+        <div class="card">
+            <h2>Las tarjetas de crédito </h2>
+            <p>Estas funcionan mediante un sistema de crédito rotativo. Los titulares de tarjetas pueden utilizar un límite de crédito establecido por la institución financiera emisora para hacer compras y luego pagar el saldo total o parcial de la tarjeta en una fecha determinada. Si el titular de la tarjeta no paga el saldo total, se le cobrará intereses sobre el saldo adeudado.</p>
+            <img class = "img-2" src="../../../images/bubble-gum-online-card-payment.svg"></img>
+        </div>
+        <div class="card">
+            <h2>Las tarjetas de débito</h2>
+            <p>Estas permiten a los usuarios gastar solo el dinero que tienen en su cuenta bancaria. Los pagos se deducen directamente de la cuenta del titular de la tarjeta. Al igual que las tarjetas de crédito, las tarjetas de débito son emitidas por instituciones financieras y pueden tener una variedad de características, como recompensas por gastos o protección contra fraudes.</p>
+            <img class = "img-2" src="../../../images/bubble-gum-bank-card.svg"></img>
+        </div>
+
+
+        <div class="card">
+            <h2>Arrastra las palabras en el orden correcto</h2>
+            <table class="table table-hover ">
+                 <caption>Ordena de arriba a abajo, El proceso para utilizar sistemas de pago electrónico</caption>
+                <tr><td class="ficha correct" draggable="true">Confirmación del pago</td></tr>
+                <tr><td class="ficha correct" draggable="true">Realización de pagos</td></tr>
+                <tr><td class="ficha correct" draggable="true">Selección del proveedor</td></tr>
+                <tr><td class="ficha correct" draggable="true">Verificación</td></tr>
+                <tr><td class="ficha correct" draggable="true">Registro</td></tr>
+                <tr><td class="ficha correct" draggable="true">Depósito de fondos</td></tr>
+            </table>
+            <div id="resultado"></div>            
+            <button id="verificar">Verificar</button>
+        </div>
+        
+        <div class="card Felicidades active">
+            <h2>Felicidades, llegaste al final.</h2>
+            <h3>Vamos a realizar una pequeña prueba para reforzar lo aprendido:</h2>
+            <div class="contFeliz">
+                <ul class="indicaciones">
+                    <li>6 Preguntas (20 segundos cada una)</li>
+                    <li>Acumula puntos por pregunta correcta</li>
+                    <li>200 segundos en el reloj</li>
+                    <li>Preguntas aleatorias</li>
+                    <li>Tu resultado al final</li>
+                </ul>
+                <img class = "img-2" src="../../../images/bubble-gum-done.svg"></img>
+            </div>
+        </div>            
+        <div class = "contBotonSig"><button id="next-button" type="button">Siguiente</button></div>
+    </div>
+</body>
+<script src="../../actividades/DragAndDrop/js/dragDrop.js"></script>
+<script src="js/quiz.js"></script>
+</html>

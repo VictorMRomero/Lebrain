@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Lebrain-NEI41</title>
+        <link rel="stylesheet" href="../../actividades/relacionarColumnas/css/estilosRelacionarColumnasBoton.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/style.css">   
+
+        <!--Tipo de letra-->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Tilt+Neon&display=swap" rel="stylesheet">
+   </head>
+   <body>
+        <div id="loader"></div>
+        <div id="card-container">  
+            <div class = "conteinerBotonBarra">
+                <a href="../negociosElectronicos1.html"><button class="boton_x">X</button></a>
+                <div class="progress bar-pro" style="height: 18px;">
+                    <div class="progress-bar progre" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" ></div>
+                </div>
+            </div>           
+            <div class="card active">
+                <h2>Sistemas de pago tradicionales</h2>
+                <p>Es un sistema que facilita la transferencia de dinero entre dos partes. Los sistemas de pago tradicionales han estado en uso durante siglos, y continúan utilizándose hoy en día. </p>
+                <img class = "img-1" src="../../../images/bubble-gum-happy-man-juggling-with-bitcoins.svg"></img>
+            </div>
+
+            <div class="card">
+                <h2>Efectivo</h2>
+                <p>El efectivo es la forma de pago más común en el mundo. Es un objeto físico que se puede utilizar para comprar bienes y servicios.</p>
+                <img class="img-2" src="../../../images/bubble-gum-bundles-of-money.svg"></img>
+            </div>
+
+            <div class="card">
+                <h2>Cheques</h2>
+                <p>Los cheques son un tipo de pago en papel que se puede utilizar para pagar bienes y servicios. Los cheques se realizan en una cuenta bancaria y deben ser firmados por el titular de la cuenta.</p>
+                <img class="img-2" src="../../../images/bubble-gum-signed-document.svg"></img>
+            </div>   
+
+            <div class="card Felicidades">
+                <h2>Tarjetas de crédito</h2>
+                <div class="contFeliz">
+                    <img class="img-1" src="../../../images/bubble-gum-pink-bank-card-1.svg">
+                    <p class="indicaciones">Las tarjetas de crédito son un tipo de tarjeta de plástico que se puede utilizar para comprar bienes y servicios. Las tarjetas de crédito son emitidas por un banco o institución financiera, y permiten al usuario pedir prestado dinero al emisor para pagar las compras.</p> 
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Tarjetas de débito</h2>
+                <p>Las tarjetas de débito son un tipo de tarjeta de plástico que se puede usar para comprar bienes y servicios. Las tarjetas de débito están vinculadas a una cuenta bancaria y permiten al usuario acceder al dinero en su cuenta para pagar las compras.</p>
+                <img class="img-1" src="../../../images/bubble-gum-bank-card.svg">
+            </div>
+
+            <div class="card">
+                <h2>Ventajas y desventajas</h2>
+                <p>Los sistemas de pago tradicionales tienen una serie de ventajas, que incluyen:<br>Son ampliamente aceptados.<br>Son convenientes de usar.<br>Son relativamente seguros.<br>Sin embargo, los sistemas de pago tradicionales también tienen una serie de desventajas, que incluyen:<br>Pueden ser perdidos o robados.<br>Se pueden usar para realizar transacciones fraudulentas.<br>Pueden ser lentos y caros de procesar.</p>
+                <img class="img-1" src="../../../images/folks-a-woman-sits-and-thinks.svg">
+            </div>
+
+            <div class="card">
+                <h2>Conecta las palabras</h2>            
+                <div id="main">
+                    <table class="tablaEjercicio">
+                        <tr>
+                            <td>1.	Es un objeto físico que se puede utilizar para comprar bienes y servicios: </td>
+                            <td class="boton"><button></button></td>
+                            <td class="celdaRespuesta">efectivo</td>
+                        </tr>
+                        <tr>
+                            <td>2.	Son un tipo de pago en papel que se puede utilizar para pagar bienes y servicios: </td>
+                            <td class="boton"><button></button></td>
+                            <td class="celdaRespuesta">cheques</td>
+                        </tr>
+                        <tr>
+                            <td>3.	Son emitidas por un banco, y permiten pedir prestado dinero al emisor para pagar las compras: </td>
+                            <td class="boton"><button></button></td>
+                            <td class="celdaRespuesta">Tarjeta de credito</td>
+                        </tr>
+                        <tr>
+                            <td>4.	Están vinculadas a una cuenta bancaria y permiten al usuario acceder al dinero en su cuenta para pagar las compras: </td>
+                            <td class="boton"><button></button></td>
+                            <td class="celdaRespuesta">tarjeta de debito</td>
+                        </tr>
+                        <tr>
+                            <td>5.	Es un sistema que facilita la transferencia de dinero entre dos partes: </td>
+                            <td class="boton"><button></button></td>
+                            <td class="celdaRespuesta">pago tradicional</td>
+                        </tr>
+
+                    </table>
+                    <div class="dialog-background" id="retroFinal" style="display: none;">
+                        <div class="dialog-loading-wrapper">
+                            <div class="dialog-loading-icon">
+                                <img id="botonCerrarRetro" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsTAAALEwEAmpwYAAABWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgpMwidZAAAJXUlEQVRIDXVXW2xU1xU959y58/R4ZmyPFb/HY+yAiQ3FpBRBIkIdAwVkJYIq7UdxW8lSo1ZK27RR/5Dan7T9CFWkSI0KXyU8UvcRpS1OVTBxMaQejGmMzWB7xh5sI9sYj8fzus+ufc0YAu2VRvex99lrP9be5wzfs2ePrakpxSMR9n+vcDjM7969K/n9fmPHjh3q8ePHjSeVN2/ebC8uLobOgjE/73tKXtBva2OMsCzQaNQreb0F0aN7Pp/nDodDCgQC+fPnz2dJEovdLIUjJQ6H7lUUG5ckPa0obPno0aPzcEjBT/T0XHF5PCkDa81H1taeolHGwuEFg7e1tcler1dyuVxmNpvlJKbn+fl5OOM1Ll26lEM0Jen0yj7TZIchbjVNs45zXrRmiuVxv8uYOQp5r9tt+2hsLB6nTNrtdockSVrB7kN9lkqldKmyslKCZ0LTtHVQXZ+x9fffyHZ1dRmx2Ph3FEX5rRD8e0KIFoCWA3SecxbHfQ53FQbrhZCehfyAqhqvBQL+4lwuP3zt2rWk2+12UiAFULqvrKyw9YjpAynMzMzYbt68md64MRTKZPR3ANgJ48wwzOuMiQ9kmfcjvdNIThZAJsAdsiw/g7JsZ0w/whjfL0mC6br+uSxL3ePjUwOtra2ekpISnTDoWlhYMMTa4xoolC3Q+vr6LQDthYFOACZ03eguKyt/YWpq6tfj4/GrY2PTc8FgcLW0tDR97NixhWg0OgzZ7+LxxNc4l/bDzlU49Ryi/1soVNNJgSDtVjkLeOsRI+9icHAw29wcrs1ktF4sbDIMfcDtth8bHZ28c+DAAQdSZEd0JqJb954MoRTc6XRKuVxOj0QiGZDPp2nqb5Ctb0GcQuSH7tyJXe7o6PBQzaenp02rxhBKqIUJr43BwchJgO4G6FXOba+Oj8emd+3a5bXZbByEyYRCIXV0dFRGtAbqzUBAM51OC9QzvXXrVoHvnrKysszw8M0/+nzF1bD1FVXVXgwGy3sOHjz4YGhoyA5beiFiB9i7irR0oUanYHDG5fLsHRsbixJoIZKmptqwptmkycnJOwXvC5xAeVqLiooSSOvy7t27i7Amx9icvLgo/oIov4pyvTc1lXgdXeSGSBNIC0e9FETiB+AbRCTT5D9/EnTDhg3BXM78k6Ypf21oqKzp7e1No+WcVL/a2trdpqldTqWS74BsZn9//ypS74xEZjMOh/1nACXmd9XV1W2jUgBPSD6fz37hwoV8IOA5hIz/wDSNYb8/8Ma2bdtEMplEs4dR0nyDris9WPwl1K1E18XLwaCvd2RkbC4Uqt6D75CZAdy3oJXCJ0+euoQMZMvLy12RyFDc7/fVS5J4HrZTyeTKJxUVFbIoTBcYOwSjjHNxlqIghpeWqhwTSzcMdRtKgIWmAZbnoPccptWZurrqbyI7pwFYinJjspnIltm5urpag3WKqqrWbJAkfhrroMY6KLPV1dWKAGGUrVtDfqRoC6wC2OwnjXv37jFJqtKoJrHY9DmIuqFD7eeEHlJnom/57wFUgZ8KmQvvi3DkYAxzldZBT6MRahjic+jHsXYTyEZO6YIGfjZLaTJr8ZsXwk4KjNqG7jQ2d+7c6UILvI8efR0ANCJl/HTKAN0fvs9CfgR6/6KBgTTrlE2Q1u7xeJagO4lMYZ1WB31mDRAh3B6A+vG6BAZmH85ZC5imGRnArlQcj8ffQ0QnqCQwZMlhA75QidibkPchUl9VVdX6fAY/+MjIiAKdRahiArLSdWDDyAmY4RQBerJgkOSFy4Y+XSEioRRfp3oRGOlDwfIBBn9E7QbWJokfT85n6JEuLtOquxWxLHvSMJTCV5/Hw50XL17UaRqRGvUp9XhNTc0LiPYP+BQCkoa7DUy14S7hpyIL29Fuf36s1eg7o2xRBuEYlZPUl+k7IjX50tJSEs/Y2liVptkr4YQVNW2NxPCGhrq92A8+hrwE+nkQxAadmGHwX+Ju1RxEAtsZ5rP4J1qw8fDhwzmaz+hZdXZ21g/H6ihTkmQkYIeJxsZGOwRgo3kLEWBXUXaQAKOPY6HlwBqLeR46lGIHxPdBpG+DSG/h/kN8oyV2qjoeMzabZs1yyhoxGFcT1m6EDo4BcoLMCJoitAoL/k4LcR2h1GCRxUoajbFY4lNZFvsAcB/yFSSpk4j0GOG6kQXK3r9l2dkejU5PYig5Co5j2r1CQQGlb2JiYv6ll/Y4pJYWp1Rd3coVJTkLrCMwvuXBg+Qwrv+AneCIS0XDu65fH54qKfENwMC5eHz6MpwrQsupNIXA2muBgG/UZjPfnZiI321t7UCXrDKMzizSjmj1dxGUG9l5c3l5OU5rMDLrRTrtdYyMXF/CuLNjRrwMxaaKisoPOzs7V5BO8lyDAczeoXE4FX+4sWsAJkpTWey3bo3daG/flyRPXS7dRFsyHBDV4mLPCTyjfGZPLDb1K8x4F7bXtd0Jhm0tLS1aX1+fM5dLf4JjzA5siz1FRb5vNDc36+CAGydIBd4KqhsNh8I5CihWgei4lEp5qB0FBoYxMDCQDYVqf4r8vg3nlhwO295oNDYM0rlhT7X2Y+zFPJW6I3/22a1VbBARtNyrKNl2Rck36frChYGB4RSdnYhwAGSQwd7aRWc1AnvwQOUkv3LlShqRagB9C4BvE+/w++7ExNQ/iC9Ypd+/f5+tH/bs9hKDjOMYM11e/swQThAH0QLPp1Lai+XlpeOjo7fHQQy0xpx27twmicDAVo5NnbW3tytnz55VSB4KhTb6fN4T4ArYTtOF/Rj78Ps0u6FrkKOZTMYsHASsZqcY0NNW79bX139Z17VTIFMz0g6vzTMgx2kh5BsYg4uIyjpnY592IDIfWm4j9F8BWBcy4sc7Wo59H+ewMwRKM38tR2uHvaeAHwenzV9VlZ/Ab2oXH00eDIE56EwgEhg2qV8x4znO2ayBSoAswEl+HjX9xe3ba7vU46Bkn06Z/xOYCENk8fmezdEAaGys26Sq5msA3Q+wzQBArayhATMmwDDDOB/DSx9G4weJROJTAqCWw43G6xcuOtDz7u42mf7CfEGCFwIvsJiOKyTHP4oiTctUqapeAyfKkGKwTEo6nSKBgTaD4xINGEbbaFmZwjXtEfvpe+EKBh9GHA7n+OSk08QhrBCGpYNjk/WNphttbxj4KjaMpyIgZdrwae+lZ0plYS29Fy76RlgLC0Hjv2A9Whn33I4tAAAAAElFTkSuQmCC" alt="cerrar aviso" />
+                                <div id="retroFinalMensaje">
+                                    <p> No acertaste en la mayoria, al parecer algo no quedo claro, puedes darle otro vistazo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="card Felicidades">
+                <h2>Felicidades, llegaste al final.</h2>
+                <h3>Vamos a realizar una pequeña prueba para reforzar lo aprendido:</h2>
+                <div class="contFeliz">
+                    <ul class="indicaciones">
+                        <li>6 Preguntas (20 segundos cada una)</li>
+                        <li>Acumula puntos por pregunta correcta</li>
+                        <li>200 segundos en el reloj</li>
+                        <li>Preguntas aleatorias</li>
+                        <li>Tu resultado al final</li>
+                    </ul>
+                    <img class = "img-2" src="../../../images/bubble-gum-done.svg"></img>
+                </div>
+            </div>            
+            <div class = "contBotonSig"><button id="next-button" type="button">Siguiente</button></div>
+        </div>
+   </body>
+   <script src="../js/app.js"></script>
+   <script src="../../actividades/relacionarColumnas/js/relacionarColumnasBoton.js"></script>
+
+
+
+   
+</html>

@@ -3,9 +3,12 @@ let idSubtemaActual = localStorage.getItem('idSubtema');
 let idMateria = localStorage.getItem('idMateria');
 let numSubtema = localStorage.getItem('numSubtema');
 let todosSubtemas = JSON.parse(localStorage.getItem('subtemas'));
+let idSigSubtema;
 
+if(todosSubtemas.subtemas[+numSubtema+1]){
+  idSigSubtema = todosSubtemas.subtemas[+numSubtema+1]._id;
+}
 
-let idSigSubtema = todosSubtemas.subtemas[+numSubtema+1]._id;
 
 
 let index = 0;
@@ -32,8 +35,14 @@ fetch(`https://lebrain.herokuapp.com/api/usuarios/${user.uid}`)
 
     alert('Ya puedes pasar al siguiente tema');
     
-    window.location.href=`../negociosElectronicos1.html`;
+
     
+    if(!idSigSubtema){
+      window.location.href=`../certificado.html`;
+    }else{
+      window.location.href=`../negociosElectronicos1.html`;
+    }
+
 
     })
   .catch(error => console.error(error));
@@ -42,28 +51,32 @@ fetch(`https://lebrain.herokuapp.com/api/usuarios/${user.uid}`)
 //=============================== Actualizar Subtema =====================================================
 
 const actualizarSubtema = () => {
-  
-  const subtemas = [{subtema: `${idSigSubtema}`, estado: true, calificacion: 0}];
-  const materias = [{materia: `${idMateria}`, subtemas: subtemas}];
-  const usuario = {materias: materias};
-  
-  const usuarioJSON = JSON.stringify(usuario);
-  
-  
-  
-  fetch(`https://lebrain.herokuapp.com/api/usuarios/${user.uid}`,{
-    method: 'PUT',
-    headers: {
-      'Content-Type':'application/json'
-    },
-    body: usuarioJSON
-  })//fetch
-  .then(x => actualizarUsuario())
-  .catch(error => {
-    console.error('Ya tiene la materia registrada:', error);
-    // Aquí puedes mostrar un mensaje de error al usuario, por ejemplo:
+  if(idSigSubtema){
+    const subtemas = [{subtema: `${idSigSubtema}`, estado: true, calificacion: 0}];
+    const materias = [{materia: `${idMateria}`, subtemas: subtemas}];
+    const usuario = {materias: materias};
     
-  })
+    const usuarioJSON = JSON.stringify(usuario);
+    
+    
+    
+    fetch(`https://lebrain.herokuapp.com/api/usuarios/${user.uid}`,{
+      method: 'PUT',
+      headers: {
+        'Content-Type':'application/json'
+      },
+      body: usuarioJSON
+    })//fetch
+    .then(x => actualizarUsuario())
+    .catch(error => {
+      console.error('Ya tiene la materia registrada:', error);
+      // Aquí puedes mostrar un mensaje de error al usuario, por ejemplo:
+      
+    })
+  }else{
+    console.log('entro al else')
+    actualizarUsuario();
+  }
 }
 
 //=============================== Actualizar Subtema Hecho===============================================
@@ -284,8 +297,6 @@ function result()
           ocultar.style.display = 'none';
           siguiente.addEventListener("click", () => {
             actualizarSubtemaHecho(score);
-
-
           });
         }
 

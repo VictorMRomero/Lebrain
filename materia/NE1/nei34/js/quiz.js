@@ -1,82 +1,70 @@
 const quiz = [
+  {
+    question: "¿Cuál es la diferencia entre una tienda electrónica y una subasta electrónica?",
+    option: [
+    "En una tienda electrónica se venden productos a un precio fijo, mientras que en una subasta electrónica se venden productos al mejor postor",
+    "En una tienda electrónica se subastan productos, mientras que en una subasta electrónica se venden productos a un precio fijo",
+    "Ambas son lo mismo, solo cambia el nombre",
+    "En una tienda electrónica se compran productos usados, mientras que en una subasta electrónica se compran productos nuevos"
+    ],
+    answer: 1,
+    retro: "La principal diferencia entre una tienda electrónica y una subasta electrónica es que en una tienda electrónica se venden productos a un precio fijo, mientras que en una subasta electrónica se venden productos al mejor postor."
+    },
     {
-      question: "¿Qué es la arquitectura tecnológica de los negocios electrónicos?",
+      question: "¿Cuál es la función principal de los proveedores de servicios en la cadena de valor en los negocios electrónicos?",
       option: [
-      "El diseño de la estructura física de una empresa",
-      "La estructura técnica de una empresa",
-      "El diseño de la página web de una empresa",
-      "El diseño de la publicidad en línea de una empresa",
+        "Brindar servicios de hosting y desarrollo de software",
+        "Proveer productos y servicios al cliente final",
+        "Ofrecer servicios especializados como marketing digital y consultoría",
+        "Mejorar la eficiencia de la cadena de suministro y reducir costos"
       ],
-      answer: 2,
-      retro: "La arquitectura tecnológica de los negocios electrónicos se refiere a la estructura técnica de una empresa que facilita la realización de transacciones y el manejo de información en línea."
+      answer: 4,
+      retro: "Los proveedores de servicios en la cadena de valor en los negocios electrónicos tienen como función principal mejorar la eficiencia de la cadena de suministro, reducir costos y aumentar la calidad de los productos y servicios ofrecidos."
     },
     {
-      question: "¿Qué es el hardware en la arquitectura tecnológica de los negocios electrónicos?",
+      question: "¿Cuál es la diferencia entre una tienda electrónica y una comunidad virtual?",
       option: [
-        "El software utilizado en una empresa",
-        "El conjunto de dispositivos físicos utilizados para el procesamiento de datos",
-        "La conexión a internet",
-        "El diseño de la página web",
-      ],
-      answer: 2,
-      retro: "El hardware en la arquitectura tecnológica de los negocios electrónicos se refiere al conjunto de dispositivos físicos, como servidores, dispositivos de almacenamiento y dispositivos de red, utilizados para el procesamiento de datos."
-    },
-    {
-      question: "¿Qué es un servidor en la arquitectura tecnológica de los negocios electrónicos?",
-      option: [
-        "Un dispositivo que permite la conexión a internet",
-        "Un dispositivo de almacenamiento de información",
-        "Un dispositivo que procesa y entrega información",
-        "Un dispositivo de seguridad informática",
-      ],
-      answer: 3,
-      retro: "Un servidor en la arquitectura tecnológica de los negocios electrónicos es un dispositivo que procesa y entrega información a través de la red. Puede alojar sitios web, aplicaciones y bases de datos, y proporcionar servicios como el correo electrónico y el almacenamiento en línea." 
-    },
-  
-    {
-      question: "¿Qué es un balanceador de carga en la arquitectura tecnológica de los negocios electrónicos?",
-      option: [
-        "Un dispositivo que distribuye el tráfico de red entre varios servidores",
-        "Un dispositivo que protege la red contra ataques externos",
-        "Un dispositivo que almacena copias de seguridad de la información",
-        "Un dispositivo que procesa y almacena información en la nube",
-        ],
-        answer: 1,
-        retro: "Un balanceador de carga en la arquitectura tecnológica de los negocios electrónicos es un dispositivo que distribuye el tráfico de red entre varios servidores, asegurando que el flujo de tráfico se equilibre entre ellos y evitando la sobrecarga en un solo servidor."
-    },
-  
-    {
-        question: "¿Qué es un cortafuegos en la arquitectura tecnológica de los negocios electrónicos?",
-        option: [
-          "Un dispositivo que procesa y entrega información a través de la red",
-          "Un dispositivo que distribuye el tráfico de red entre varios servidores",
-          "Un dispositivo que protege la red contra ataques externos",
-          "Un dispositivo que almacena copias de seguridad de la información",
-        ],
-        answer: 3,
-        retro: "Un cortafuegos en la arquitectura tecnológica de los negocios electrónicos es un dispositivo que protege la red contra ataques externos, restringiendo el acceso no autorizado y permitiendo sólo el tráfico permitido"
-    },
-    {
-      question: "¿Por qué es importante la redundancia en la arquitectura de hardware?",
-      option: [
-        "Para ahorrar costos en la implementación de hardware",
-        "Para mejorar la velocidad de procesamiento de la información",
-        "Para garantizar la continuidad del negocio en caso de fallos en el hardware",
-        "Para mejorar la seguridad del sistema"
-      ],
-      answer: 3,
-      retro: "La redundancia es importante porque garantiza la continuidad del negocio en caso de fallos en el hardware, permitiendo la recuperación rápida de los sistemas y datos afectados."
-    },
-    {
-      question: "¿Cuál es la función de los servidores en la arquitectura de hardware?",
-      option: [
-        "Ejecutar aplicaciones y almacenar datos",
-        "Enviar y recibir correos electrónicos",
-        "Realizar copias de seguridad de los datos",
-        "Conectar los dispositivos de red de la empresa"
+      "Las tiendas electrónicas son plataformas para vender productos y servicios mientras que las comunidades virtuales son plataformas para conectar a personas con intereses comunes",
+      "Las tiendas electrónicas son plataformas para compartir información mientras que las comunidades virtuales son plataformas para comprar productos y servicios",
+      "Las tiendas electrónicas son plataformas para subastar productos y servicios mientras que las comunidades virtuales son plataformas para conectarse con proveedores de servicios",
+      "No hay diferencia, son lo mismo"
       ],
       answer: 1,
-      retro: "Los servidores tienen la función de ejecutar aplicaciones y almacenar datos, permitiendo a los usuarios acceder a ellos de forma remota a través de diferentes dispositivos y plataformas."
+      retro: "Las tiendas electrónicas son plataformas para vender productos y servicios en línea, mientras que las comunidades virtuales son plataformas en línea donde las personas con intereses comunes pueden conectarse y compartir información."
     },
-    
+  
+    {
+      question: "¿Cuál es la principal función de una tienda electrónica?",
+      option: [
+        "Ofrecer productos y servicios en un entorno físico",
+        "Permitir que los clientes subasten productos y compren al mejor postor",
+        "Ofrecer un espacio virtual donde los clientes puedan interactuar con los productos y servicios",
+        "Subcontratar servicios en la cadena de valor"
+      ],
+      answer: 3,
+      retro: "La principal función de una tienda electrónica es ofrecer un espacio virtual donde los clientes puedan interactuar con los productos y servicios, y realizar compras en línea."
+    },
+  
+    {
+      question: "¿En qué consiste un escaparate de marketing y cómo puede ser utilizado por las empresas?",
+      option: [
+      "Es una tienda virtual en la que los usuarios pueden explorar los productos y servicios de la empresa",
+      "Es una herramienta publicitaria que permite a las empresas mostrar sus productos y servicios a través de una vitrina virtual",
+      "Es una plataforma en la que las empresas pueden ofrecer subastas de sus productos y servicios",
+      "Es una comunidad virtual en la que las empresas pueden interactuar con sus clientes y potenciales clientes"
+      ],
+      answer: 2,
+      retro: "Un escaparate de marketing es una herramienta publicitaria en la que las empresas pueden mostrar sus productos y servicios a través de una vitrina virtual. Puede ser utilizado por las empresas para atraer a los clientes potenciales y mejorar la visibilidad de su marca y productos en línea."
+    },
+    {
+      question: "¿Qué son los integradores de la cadena de valor?",
+      option: [
+      "Empresas que se encargan de unir a diferentes actores de la cadena de suministro",
+      "Empresas que se encargan de producir los productos de la cadena de suministro",
+      "Empresas que se encargan de distribuir los productos de la cadena de suministro",
+      "Empresas que se encargan de almacenar los productos de la cadena de suministro"
+      ],
+      answer: 0,
+      retro: "Los integradores de la cadena de valor son empresas que se encargan de unir a diferentes actores de la cadena de suministro. Por ejemplo, empresas que se especializan en la logística y coordinación de la cadena de suministro de una compañía para mejorar su eficiencia y rentabilidad."
+    }    
   ]  

@@ -119,6 +119,12 @@ for(let i = 0; i<totalMaterias; i++){
             </div>
         </div>
         `;
+        // Obtén una referencia al primer elemento <p> dentro de todos los elementos con la clase "blog-card"
+        var parrafo = document.querySelector(".blog-card p:first-of-type");
+
+        // Añade un estilo adicional al pseudoelemento :before
+        parrafo.style.setProperty("width", `${(100/subtemas.total)*(user.materias[i].subtemas.length)}%`);
+        
 
         let botonEliminar = document.querySelector('.eliminar');
         botonEliminar.addEventListener('click', (e) => {

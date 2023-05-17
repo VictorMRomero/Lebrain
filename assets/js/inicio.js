@@ -3,7 +3,7 @@ const token = localStorage.getItem('token');
 
 
 let bienvenida = document.getElementById("bienvenida");
-bienvenida.innerHTML = `<h1 class="fw-bold"> Bienvenido "${user.nombre}" vamos a aprender juntos</h1>`;
+bienvenida.innerHTML = `<h1 class="fw-bold"> Bienvenida/o "${user.nombre}" vamos a aprender juntos</h1>`;
 
 
 if(user.materias.length){

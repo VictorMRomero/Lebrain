@@ -1,10 +1,11 @@
 const user = JSON.parse(localStorage.getItem('user'));
 const token = localStorage.getItem('token');
+const subtemas = JSON.parse(localStorage.getItem('subtemas'));
+const idMateria = localStorage.getItem('idMateria');
 
-console.log(user.nombre); 
-console.log(user.uid); 
+
 let totalMaterias = user.materias.length;
-console.log(token); 
+
 
 let actualizarUsuario = document.getElementById("actualizarUsuario");
 const pattern = "(?=.*\\d)(?=.*[a-zA-Z]).{8,}"
@@ -98,24 +99,22 @@ for(let i = 0; i<totalMaterias; i++){
     //console.log(data.materias[0])
     // nombreMateria = data.materia.nombre;
     //linkMateria = data.link;
-    mostrarMaterias(dataMaterias);
+    mostrarMaterias(dataMaterias, i);
 
     })
   .catch(error => console.error(error));
     
     
-    const mostrarMaterias = (dataMaterias) => {
+    const mostrarMaterias = (dataMaterias, i) => {
 
-    
+
         let tarjetas = document.getElementById('tarjetas');
-        console.log(tarjetas)
-        
         tarjetas.innerHTML += `
         <div class="blog-card">
             <div class="description">
                 <h1>${dataMaterias.nombre.toUpperCase()}</h1>
                 <h2>${dataMaterias.descripcion}</h2>
-                <p>${30/user.materias[0].subtemas.length}%</p>
+                <p>${(100/subtemas.total)*(user.materias[i].subtemas.length)}%</p>
                 <div class ="conBoton"><button class="eliminar">Eliminar</button></div>
             </div>
         </div>

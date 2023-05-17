@@ -169,7 +169,7 @@ function mostrarMaterias(dataMaterias){
           boton.textContent = 'ir al temario';
           boton.addEventListener('click', (e)=>{
             e.preventDefault;
-            window.location.href="../../materia/NE1/negociosElectronicos1.html"
+            window.location.href="../materia/NE1/negociosElectronicos1.html"
           });
       
           })

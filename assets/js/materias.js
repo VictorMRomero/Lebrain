@@ -1,5 +1,6 @@
 const user = JSON.parse(localStorage.getItem('user'));
-let dataMaterias = '';
+let todasMaterias = '';
+const idMateria = localStorage.getItem('idMateria');  
 
 //Se listan las materias disponibles en la base de datos
 fetch('https://lebrain.herokuapp.com/api/materias')
@@ -11,75 +12,97 @@ fetch('https://lebrain.herokuapp.com/api/materias')
     }
   })
   .then(data => {
-    dataMaterias = data;
+    todasMaterias = data;
     //console.log(data.total)
     //console.log(data.materias[0])
     // nombreMateria = data.materia.nombre;
     //linkMateria = data.link;
-    mostrarMaterias(dataMaterias);
+    mostrarMaterias(todasMaterias);
 
     })
   .catch(error => console.error(error));
 
-function mostrarMaterias(dataMaterias){
+function mostrarMaterias(todasMaterias){
+  
+  let total = todasMaterias.total;
+  let materia = document.getElementById("materias");
+  let idMateriasUsuarios=[];
 
-  
-  let total = dataMaterias.total;
-  let materiaData = dataMaterias.materias[0];
-  
+  for(i of user.materias){
+    idMateriasUsuarios += i.materia._id;
+  }
+
+
   
   for(let i = 0; i < total; i++){
-    materiaData = dataMaterias.materias[i];
-    console.log(materiaData._id)
-    let materia = document.getElementById("materias");
-    materia.innerHTML += `
+    let dataMateriaActual = todasMaterias.materias[i];
+
+    if(idMateriasUsuarios.includes(todasMaterias.materias[i]._id)){
+      // El usuario ya tiene la materia
+      materia.innerHTML += `
       <div class="card-body">
-      <div class="bs-icon-lg bs-icon-rounded bs-icon-secondary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-3 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-school">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
-              <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
-      </svg></div>
-      <div>
-      
-      </div>
-        <h4 class="fw-bold">${materiaData.nombre}</h4>
-          <p class="text-muted">${materiaData.descripcion}</p>
-          <a><button class="inicioTemario btn  px-1" id="${materiaData._id}" type="button">Añadir<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right" >
-            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-          </svg></button></a>
+        <div class="bs-icon-lg bs-icon-rounded bs-icon-secondary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-3 bs-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-school">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
+            <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
+          </svg>
+        </div>
+        <div></div>
+        <h4 class="fw-bold">${dataMateriaActual.nombre}</h4>
+        <p class="text-muted">${dataMateriaActual.descripcion.slice(0, 90)}...</p>
+        <a><button class="yaTiene inicioTemario btn px-1" data-link-materia="${dataMateriaActual.link}" data-id-materia="${dataMateriaActual._id}" type="button">Temario</button></a>
       </div>
     `;
+    } else {
+      // El usuario no tiene la materia
+      materia.innerHTML += `
+      <div class="card-body">
+        <div class="bs-icon-lg bs-icon-rounded bs-icon-secondary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-3 bs-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-school">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
+            <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
+          </svg>
+        </div>
+        <div></div>
+        <h4 class="fw-bold">${dataMateriaActual.nombre}</h4>
+        <p class="text-muted">${dataMateriaActual.descripcion}</p>
+        <a><button class="inicioTemario btn px-1" id="${dataMateriaActual._id}" type="button">Añadir</button></a>
+      </div>
+    `;
+    }
+  
+  }
+  
 
     
-  }
-  //aqui va un for
+  
 
+  //Seleccionamos los que ya tiene añadido el usuario
+  let irTemario = document.querySelectorAll('.yaTiene')
+  irTemario.forEach((boton) => {
+    
+    boton.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      const botonHTML = event.target; //asi sabemos a que boton le dio click
+      const valorAtributo = botonHTML.getAttribute("data-link-materia");
+      let idMateria = botonHTML.getAttribute('data-id-materia');
+      localStorage.setItem('idMateria', idMateria)
+      window.location.href = `materia/${valorAtributo}`;
+    })
+  })
+
+  
+  //Seleccionamos todos los botones con id
   const botones = document.querySelectorAll('button[id]');
-
-  // Agregar manejador de eventos a cada botón
+  // Agregar manejador de eventos a cada botón de las que puede agregar
   botones.forEach((boton) => {
     boton.addEventListener('click', (event) => {
-      const idBoton = event.target.id;
-      const boton = event.target;
-
-  // Cambiar el texto del botón
-
-      localStorage.setItem('idMateria', idBoton);
-
-      console.log(`Se hizo clic en el botón con id "${idBoton}"`);
-
-      let totaUsuario = user.materias.length;
-
-      for(let i = 0; i < totaUsuario; i++){
-        if(user.materias[0].materia === idBoton){
-          boton.textContent = 'ir al temario';
-          boton.addEventListener('click', (e)=>{
-            e.preventDefault;
-            window.location.href="./materia/NE1/negociosElectronicos1.html"
-          });
-          return
-        }
-      }
+      const idBoton = boton.id;
+      localStorage.setItem('idMateria', idBoton)
+      
 
       
       fetch(`https://lebrain.herokuapp.com/api/subtemas`)//fetch
@@ -92,27 +115,28 @@ function mostrarMaterias(dataMaterias){
       })
       .then(data => {
         primerSub(data);
-        addMateria(primerSubtema, idBoton);
-
   
       })
-      .catch(error => {
-      console.error('Ya tiene la materia registrada:', error);
-        alert('Paso un error intenta mas tarde')
-      })
+      .catch(error => {alert('Paso un error intenta mas tarde')})
       
       //=========primer subtema
       let primerSubtema;
       const primerSub = (data) =>{
         const total = data.subtemas.length;
         for(let i = 0; i < total; i++){
-          if(idBoton === data.subtemas[0].materia._id){
+          if(idBoton === data.subtemas[i].materia._id){
             
-            primerSubtema = data.subtemas[i]._id
+            primerSubtema = data.subtemas[i]._id;
+            console.log(data.subtemas[i])
+            addMateria(primerSubtema, idBoton);
             return
-          }       
+            
+          }     
              
         }
+        alert('no encontro ninguno')
+        console.log(primerSubtema)
+        return
 
       }
       
@@ -120,7 +144,8 @@ function mostrarMaterias(dataMaterias){
       //=========Añadir la materia
 
       const addMateria = (primerSubtema) => {
-
+        console.log('si entro a addmateria')
+        console.log(primerSubtema)
         const subtemas = [{subtema: primerSubtema, estado: true, calificacion:0}];
         const materias = [{materia: idBoton, subtemas: subtemas}];
         const usuario = {materias: materias};
@@ -178,6 +203,7 @@ function mostrarMaterias(dataMaterias){
         }
 
       
+        
         
     });
     //actualizarUsuario

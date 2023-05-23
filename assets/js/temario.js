@@ -69,11 +69,12 @@ function mostrarSubtemas(dataSubtemas){
 
 //Se ponen los que ya aprobo el estudiante
 
+
   let totalMateriasUsuario = user.materias.length;
 
   for(let i = 0; i < totalMateriasUsuario; i++){
-
-    if(user.materias[i].materia === idMateria){
+    
+    if(user.materias[i].materia._id === idMateria){
 
       let totalSubtemas = user.materias[i].subtemas.length;
 

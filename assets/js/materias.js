@@ -88,9 +88,9 @@ function mostrarMaterias(todasMaterias){
       
       const botonHTML = event.target; //asi sabemos a que boton le dio click
       const valorAtributo = botonHTML.getAttribute("data-link-materia");
-      let idMateria = botonHTML.getAttribute('data-id-materia');
-      localStorage.setItem('idMateria', idMateria)
-      window.location.href = `materia/${valorAtributo}`;
+      let idDeMateria = botonHTML.getAttribute('data-id-materia');
+      localStorage.setItem('idMateria', idDeMateria)
+      window.location.href = `./materia/${valorAtributo}`;
     })
   })
 
@@ -144,8 +144,7 @@ function mostrarMaterias(todasMaterias){
       //=========Añadir la materia
 
       const addMateria = (primerSubtema) => {
-        console.log('si entro a addmateria')
-        console.log(primerSubtema)
+
         const subtemas = [{subtema: primerSubtema, estado: true, calificacion:0}];
         const materias = [{materia: idBoton, subtemas: subtemas}];
         const usuario = {materias: materias};

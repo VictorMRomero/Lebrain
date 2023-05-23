@@ -1,6 +1,26 @@
 const usuario = document.getElementById("usuario");
 
 
+const actualizarDatosUsuario = (id) => {
+    fetch(`https://lebrain.herokuapp.com/api/usuarios/${id}`)
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error('Error en la respuesta de la petición GET');
+      }
+      })
+      .then(data => {
+        localStorage.removeItem('idMateria');
+        localStorage.setItem('user', JSON.stringify(data));
+        window.location.href = 'inicio.html'
+
+        
+    
+        })
+      .catch(error => console.error(error));
+    }
+
 usuario.addEventListener("submit", (event) => {
     event.preventDefault();
     const valorCorreo = document.querySelector('.correo').value;
@@ -22,13 +42,13 @@ usuario.addEventListener("submit", (event) => {
         return response.json(); // Aquí se obtiene el objeto JSON de la respuesta
     })
     .then(data => {
-        console.log(data); // Aquí se pueden ver los datos del objeto JSON
+        actualizarDatosUsuario(data.usuario.uid); // Aquí se pueden ver los datos del objeto JSON
 
         // Aquí puedes hacer algo con el token y el objeto usuario, por ejemplo, guardarlos en local storage
         localStorage.setItem('token', data.token);
-        localStorage.setItem('user', JSON.stringify(data.usuario));
 
-        window.location.replace("inicio.html"); // especifica la ruta de la página a la que deseas redirigir
+        
+        //window.location.replace("inicio.html"); // especifica la ruta de la página a la que deseas redirigir
     })
     .catch(error => {
 

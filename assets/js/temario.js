@@ -33,7 +33,7 @@ function mostrarSubtemas(dataSubtemas){
   
   for(let i = 0; i < total; i++){
 
-    
+  
   if(dataSubtemas.subtemas[i].materia._id === idMateria){
 
     let subtemaData = dataSubtemas.subtemas[i];
@@ -74,7 +74,7 @@ function mostrarSubtemas(dataSubtemas){
 
   for(let i = 0; i < totalMateriasUsuario; i++){
     
-    if(user.materias[i].materia === idMateria){
+    if(user.materias[i].materia._id === idMateria){
 
       let totalSubtemas = user.materias[i].subtemas.length;
 

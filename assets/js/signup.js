@@ -2,6 +2,26 @@
 //Seleccionamos el formulario
 const usuario = document.getElementById("usuario");
 
+const actualizarDatosUsuario = (id) => {
+  fetch(`https://lebrain.herokuapp.com/api/usuarios/${id}`)
+  .then(response => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error('Error en la respuesta de la petición GET');
+    }
+    })
+    .then(data => {
+      localStorage.removeItem('idMateria');
+      localStorage.setItem('user', JSON.stringify(data));
+      window.location.href = 'inicio.html'
+
+      
+  
+      })
+    .catch(error => console.error(error));
+  }
+
 //Le agregamos un evento al boton
 usuario.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -56,9 +76,7 @@ usuario.addEventListener("submit", (event) => {
     .then(data => {
         // Aquí puedes hacer algo con el token y el objeto usuario, por ejemplo, guardarlos en local storage
         localStorage.setItem('token', data.token);
-        localStorage.setItem('user', JSON.stringify(data.usuario));
-
-        window.location.replace("inicio.html"); // especifica la ruta de la página a la que deseas redirigir
+        actualizarDatosUsuario(data.usuario.uid);
     })
     .catch(error => {
         console.error('Hubo un problema con la solicitud fetch:', error);

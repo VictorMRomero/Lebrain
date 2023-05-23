@@ -15,7 +15,7 @@ if(user.materias.length){
   let total = materias.length;
   for(let i = 0; i < total; i++){
     
-    let uidMateria = user.materias[i].materia;
+    let uidMateria = user.materias[i].materia._id;
     console.log(uidMateria)
     
     fetch(`https://lebrain.herokuapp.com/api/materias/${uidMateria}`)

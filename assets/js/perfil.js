@@ -85,7 +85,7 @@ function checkPasswords() {
 
 for(let i = 0; i<totalMaterias; i++){
     
-    fetch(`https://lebrain.herokuapp.com/api/materias/${user.materias[i].materia}`)
+    fetch(`https://lebrain.herokuapp.com/api/materias/${user.materias[i].materia._id}`)
   .then(response => {
     if (response.ok) {
       return response.json();

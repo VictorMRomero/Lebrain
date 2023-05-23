@@ -19,23 +19,24 @@ fetch('https://lebrain.herokuapp.com/api/subtemas')
     //console.log(data.materias[0])
     // nombreMateria = data.materia.nombre;
     //linkMateria = data.link;
+    
     mostrarSubtemas(dataSubtemas);
 
     })
   .catch(error => console.error(error));
 
 function mostrarSubtemas(dataSubtemas){
-
+  
   localStorage.setItem('subtemas', JSON.stringify(dataSubtemas));
   let total = dataSubtemas.total;
 
 
-  
+
   for(let i = 0; i < total; i++){
 
   
-  if(dataSubtemas.subtemas[i].materia._id === idMateria){
 
+  if(dataSubtemas.subtemas[i].materia._id === idMateria){
     let subtemaData = dataSubtemas.subtemas[i];
 
 
@@ -71,7 +72,7 @@ function mostrarSubtemas(dataSubtemas){
 
 
   let totalMateriasUsuario = user.materias.length;
-
+  
   for(let i = 0; i < totalMateriasUsuario; i++){
     
     if(user.materias[i].materia._id === idMateria){
@@ -81,7 +82,7 @@ function mostrarSubtemas(dataSubtemas){
       for(let j = 0; j < totalSubtemas; j++){
         let Subtema = user.materias[i].subtemas[j]
         let idSubtema = Subtema.subtema;   
-        
+        console.log(idSubtema)
         // Se tiene el id del usuario, con eso se jala los datos de los subtemas
 
         fetch(`https://lebrain.herokuapp.com/api/subtemas/${idSubtema}`)

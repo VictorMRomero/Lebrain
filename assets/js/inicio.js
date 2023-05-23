@@ -28,15 +28,14 @@ if(user.materias.length){
       })
       .then(data => {
             console.log(data)
-            nombreMateria = data.nombre;
-            linkMateria = data.link;
-            descripcionMateria = data.descripcion;
-            miFuncion(nombreMateria, linkMateria, descripcionMateria);
+
+            miFuncion(data);
         })
       .catch(error => console.error(error));
     
     
-      function miFuncion(nombreMateria, linkMateria, descripcionMateria) {
+      function miFuncion(data) {
+
     
         let materia = document.getElementById("materia");
         materia.innerHTML += `
@@ -46,11 +45,18 @@ if(user.materias.length){
         <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
         </svg></div>
         <div>
-          <h4 class="fw-bold">${nombreMateria}</h4>
-          <p class="text-muted">${descripcionMateria.slice(0,100)}...</p>
-          <a href="materia/${linkMateria}"><button class="inicioTemario btn px-1" type="button" > Ir al temario </button></a>
+          <h4 class="fw-bold">${data.nombre}</h4>
+          <p class="text-muted">${data.descripcion.slice(0,100)}...</p>
+          <button class="inicioTemario btn px-1" type="button" > Ir al temario </button>
         </div>
         `;
+
+        let irTemario = document.querySelector('.inicioTemario');
+        irTemario.addEventListener('click', (e) => {
+          e.preventDefault();
+          localStorage.setItem('idMateria', data._id)
+          window.location.href = `materia/${data.link}`;
+        })
     
       } 
   

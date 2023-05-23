@@ -68,7 +68,7 @@ function mostrarMaterias(todasMaterias){
         <div></div>
         <h4 class="fw-bold">${dataMateriaActual.nombre}</h4>
         <p class="text-muted">${dataMateriaActual.descripcion}</p>
-        <a><button class="inicioTemario btn px-1" id="${dataMateriaActual._id}" type="button">Añadir</button></a>
+        <a><button class="inicioTemario btn px-1" id="${dataMateriaActual._id}" data-link-materia="${dataMateriaActual.link}" type="button">Añadir</button></a>
       </div>
     `;
     }
@@ -117,7 +117,7 @@ function mostrarMaterias(todasMaterias){
         primerSub(data);
   
       })
-      .catch(error => {alert('Paso un error intenta mas tarde')})
+      .catch(error => {console.log(error)})
       
       //=========primer subtema
       let primerSubtema;
@@ -160,8 +160,7 @@ function mostrarMaterias(todasMaterias){
         })//fetch
         .then(x => actualizarUsuario())
         .catch(error => {
-        console.error('Ya tiene la materia registrada:', error);
-          alert('Paso un error intenta mas tarde')
+        console.log(error)
         })
 
       }
@@ -187,13 +186,12 @@ function mostrarMaterias(todasMaterias){
           
           localStorage.setItem('user', JSON.stringify(data));
           localStorage.setItem('idMateria', idBoton);
-          console.log('actualizado')
           alert('Materia Agregada correctamente');
 
           boton.textContent = 'ir al temario';
           boton.addEventListener('click', (e)=>{
             e.preventDefault;
-            window.location.href="../materia/NE1/negociosElectronicos1.html"
+            window.location.href="./materia/NE1/negociosElectronicos1.html"
           });
       
           })

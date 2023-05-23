@@ -29,7 +29,7 @@ function mostrarMaterias(todasMaterias){
   let idMateriasUsuarios=[];
 
   for(i of user.materias){
-    idMateriasUsuarios += i.materia._id;
+    idMateriasUsuarios += i.materia;
   }
 
 

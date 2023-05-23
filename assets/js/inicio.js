@@ -8,13 +8,14 @@ bienvenida.innerHTML = `<h1 class="fw-bold"> Bienvenida/o "${user.nombre}" vamos
 
 if(user.materias.length){
   materias = user.materias;
+  
   let nombreMateria = '';
   let linkMateria = '';
   //aqui debe de ir un for
-  let total = user.materias.length;
+  let total = materias.length;
   for(let i = 0; i < total; i++){
-
-    let uidMateria = user.materias[i].materia._id;
+    
+    let uidMateria = user.materias[i].materia;
     console.log(uidMateria)
     
     fetch(`https://lebrain.herokuapp.com/api/materias/${uidMateria}`)

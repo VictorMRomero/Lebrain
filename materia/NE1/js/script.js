@@ -5,6 +5,8 @@ let numSubtema = localStorage.getItem('numSubtema');
 let todosSubtemas = JSON.parse(localStorage.getItem('subtemas'));
 let idSigSubtema;
 
+let timer;
+
 if(todosSubtemas.subtemas[+numSubtema+1]){
   idSigSubtema = todosSubtemas.subtemas[+numSubtema+1]._id;
 }
@@ -81,7 +83,7 @@ const actualizarSubtema = () => {
 
 //=============================== Actualizar Subtema Hecho===============================================
 const actualizarSubtemaHecho = (score) => {
-  
+
   const subtemas = [{subtema: `${idSubtemaActual}`, estado: true, calificacion: score}];
   const materias = [{materia: `${idMateria}`, subtemas: subtemas}];
   const usuario = {materias: materias};
@@ -101,8 +103,11 @@ const actualizarSubtemaHecho = (score) => {
 .catch(error => {
 console.error('Ya tiene la materia registrada:', error);
   // Aquí puedes mostrar un mensaje de error al usuario, por ejemplo:
-  
 })
+
+  
+  
+  
 }
 //=============================== FIN Actualizar subtema==================================================
   // Mostrar la animación de carga
@@ -129,7 +134,6 @@ window.addEventListener("load", function() {
 
 
 
-
 let questions = quiz.sort(function(){
    return 0.5 - Math.random();
 });
@@ -142,21 +146,22 @@ $(function(){
     let sec = 0;
     let counter = 0;
 
-    let timer = setInterval( function(){
+    timer = setInterval( function(){
         counter++;
         min = Math.floor( (totalTime - counter) / 60) //Calculamos los minutos
         sec = totalTime - (min * 60) - counter //Calculamos los segundos
 
         // Se muestre en pantalla
         $(".timerBox span").text(min +" : "+sec)
-
+        
         if(counter == totalTime)
         {
             alert("El tiempo terminó, presiona OK para ver el resultado");
-            result();
             clearInterval(timer);
+            //  result();
         }
     }, 1000); //Segundo de intervalo
+
     // Codigo del Reloj
 
     // Imprimimos preguntas
@@ -249,60 +254,61 @@ function showResult(j){
         } else if (j == 1 && num < 10 && attempts == 2 && !confirm("Aún no has terminado, presiona OK y te mostrará el resultado de tu segundo intento.")) {
           return;
         }
+        clearInterval(timer);
         result();
 }
 function result()
 {
-        // questionScreen.style.display = "none";
-        score = Math.floor(score * (100/6))
-        $("#totalQuestion").text(totalQuestions)
-        $("#questionScreen").hide()
-        $(".scoreBoard span").text(score)
-        $("#resultScreen").show()
-        $("#attemptQuestion").text(attempt)
-        $("#correctQuestion").text(Math.floor(score))
-        $("#wrongAnswers").text(wrong)
-        // resultScreen.style.display = "block";
+  //questionScreen.style.display = "none";
+  timer = 0;
+  const calificacion = Math.floor(score * (100/6))
 
-        
-        const siguiente = document.querySelector('.denegado');
-        const ocultar = document.querySelector('.ocultar');
-        
- 
-        attempts = localStorage.getItem('attempts')
+  $("#totalQuestion").text(totalQuestions)
+  $("#questionScreen").hide()
+  $(".scoreBoard span").text(calificacion)
+  $("#resultScreen").show()
+  $("#attemptQuestion").text(attempt)
+  $("#correctQuestion").text(Math.floor(score))
+  $("#wrongAnswers").text(wrong)
 
-        if (score <= 60 && attempts < 2) { // si puntaje menor a 6 y es el primer intento
-          $(".mensaje span").text("Lo siento, tienes menos de 60 puntos. Tienes una segunda oportunidad.");
-          siguiente.textContent = "Reintentar";
-          attempts++; // aumentar el número de intentos
-          localStorage.setItem('attempts', JSON.stringify(attempts));
-          siguiente.addEventListener("click", () => {
-            window.location.href = "questions.html";
-          });
+  //resultScreen.style.display = "block";
 
-        } else if(score <= 60   && attempts >= 2){
-          $(".mensaje span").text("Lo siento, tienes menos de 60 puntos. Y ya no tienes otra oportunidad");
-          siguiente.textContent = "Verificar respuestas";
-          attempts = 1;
-          localStorage.setItem('attempts', JSON.stringify(attempts));
-          siguiente.addEventListener("click", () => {
-            
-            localStorage.setItem('malas', JSON.stringify(malas));
-            
-            window.location.href = "../verificar.html";
-          });
-        } else if(score >= 60){
-          $(".mensaje span").text("Fantastico, puedes avanzar al siguiente tema");
-          siguiente.textContent = "Terminar";
-          ocultar.style.display = 'none';
-          siguiente.addEventListener("click", () => {
-            actualizarSubtemaHecho(score);
-          });
-        }
+  
+  const siguiente = document.querySelector('.denegado');
+  const ocultar = document.querySelector('.ocultar');
+  
 
+  attempts = localStorage.getItem('attempts')
 
+  if (score <= 60 && attempts < 2) { // si puntaje menor a 6 y es el primer intento
+    $(".mensaje span").text("Lo siento, tienes menos de 60 puntos. Tienes una segunda oportunidad.");
+    siguiente.textContent = "Reintentar";
+    attempts++; // aumentar el número de intentos
+    localStorage.setItem('attempts', JSON.stringify(attempts));
+    siguiente.addEventListener("click", () => {
+      window.location.href = "questions.html";
+    });
 
-          
+  } else if(score <= 60   && attempts >= 2){
+    $(".mensaje span").text("Lo siento, tienes menos de 60 puntos. Y ya no tienes otra oportunidad");
+    siguiente.textContent = "Verificar respuestas";
+    attempts = 1;
+    localStorage.setItem('attempts', JSON.stringify(attempts));
+    siguiente.addEventListener("click", () => {
+      
+      localStorage.setItem('malas', JSON.stringify(malas));
+      
+      window.location.href = "../verificar.html";
+    });
+  } else if(score >= 60){
+    $(".mensaje span").text("Fantastico, puedes avanzar al siguiente tema");
+    siguiente.textContent = "Terminar";
+    ocultar.style.display = 'none';
+    siguiente.addEventListener("click", (e) => {
+      e.preventDefault();
+      actualizarSubtemaHecho(calificacion);
+    });
+  }          
 }
 
 

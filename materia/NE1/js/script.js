@@ -260,12 +260,12 @@ function showResult(j){
 function result()
 {
   //questionScreen.style.display = "none";
-  timer = 0;
-  const calificacion = Math.floor(score * (100/6))
+  
+  score = Math.floor(score * (100/6))
 
   $("#totalQuestion").text(totalQuestions)
   $("#questionScreen").hide()
-  $(".scoreBoard span").text(calificacion)
+  $(".scoreBoard span").text(score)
   $("#resultScreen").show()
   $("#attemptQuestion").text(attempt)
   $("#correctQuestion").text(Math.floor(score))
@@ -306,7 +306,7 @@ function result()
     ocultar.style.display = 'none';
     siguiente.addEventListener("click", (e) => {
       e.preventDefault();
-      actualizarSubtemaHecho(calificacion);
+      actualizarSubtemaHecho(score);
     });
   }          
 }
